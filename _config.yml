@@ -3,7 +3,7 @@
 #------------------------------------------------------------
 
 # What kind of thing is this ("workshop" or "lesson")?
-kind: "lesson"
+kind: "workshop"
 
 # Overall title for pages.
 title: "Hands on Multi-Modal Connectivity Analysis of the Human Brain: 2021 Oct 11-12"
