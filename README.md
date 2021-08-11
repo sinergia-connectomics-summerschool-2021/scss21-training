@@ -1,7 +1,7 @@
 # Instructions
 ## Install VirtualBox
 - Go to the VirtualBox Download page: https://www.virtualbox.org/wiki/Downloads
-- Select the link from the "VirtualBox 5.2.12 platform packages" section that matches your system.
+- Select the link from the "VirtualBox 6.1.26 platform packages" section that matches your system.
 
 - For Windows 10 users:
   1. Double-click the downloaded executable file (Windows Installer 1.1 or higher is required)
@@ -19,15 +19,17 @@
   - Step-by-step instructions can be found [here](https://websiteforstudents.com/install-virtualbox-latest-on-ubuntu-16-04-lts-17-04-17-10/)
     
 ## Download and import the VM image file
-- Download from https://training.repronim.org/reprotraining.ova
-- To import the reprotraining.ova file:
+- Download from [TO BE COMING]
+- To import the scss21-training.ova file:
   1. Open VirtualBox on your computer
   2. select "File" -> "Import Appliance" from the VirtualBox menu.
   3. Click through the import wizard dialog leaving the default settings (see here for example step-by-step instructions [here](https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html)).
 
+**Note:** You will needs at least 50GB of space available 
+
 ## Starting the VM
 - Open VirtualBox on your computer
-- Choose "reprotraining" from the menu on the left and press "start" (the green arrow) to start the Ubuntu virtual machine.
+- Choose "rcss21-training" from the menu on the left and press "start" (the green arrow) to start the Ubuntu virtual machine.
   
 ## Issues: 
 - if you have a windows 10 pro 64 bit (eg Lenovo X1C) machine and get an error like: 
@@ -36,4 +38,8 @@
 
 # The Presentations
 
-All tutorials and slides are available from the http://www.repronim.org/coco2019-training/ generated from sources within `gh-pages` branch of this repository.
+All tutorials and slides are available from the [TO BECOMING] generated from sources within `gh-pages` branch of this repository.
+
+## Aknowledgment
+
+Work derived from instructional materials from http://neurohackweek.github.io/ and http://repronim.github.io that is Copyright © Neurohackweek and ReproNim. and, released under the same [Creative Common Attribution license](https://creativecommons.org/licenses/by/4.0/).
