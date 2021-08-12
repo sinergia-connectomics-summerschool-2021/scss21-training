@@ -3,12 +3,11 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "Brain Communication Pathways Sinergia Consortium" 
+venue: "Hands on brain dynamics on the connectome sinergia online summer school 2021" 
 address: "online"  # COULD BE UPDATED with gathertown/zoom
 country: "ch" 
 language: "en"
 humandate: "Oct 11-12, 2021"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2021-10-11      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2021-10-12        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Sebastien Tourbier", "Isota Rigoni", "Nicolas Roehri", "Maria Rubega", "Jolan Heyse", "Joan Rué-Queralt", "Katharina Glomb", "Ane Lopez-Gonzalez", "Manel Vila-Vida"] 
