@@ -2,6 +2,7 @@
 title: "Lecture 2.1: Analysis of Brain Networks"
 teaching: 30
 exercises: 0
+start: true
 questions:
 - TBC
 objectives:
