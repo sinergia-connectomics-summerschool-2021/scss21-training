@@ -29,6 +29,7 @@ is_production: true
 nhw_site: "https://neurohackweek.github.io"
 nhw_github: "https://github.com/neurohackweek"
 swc_site: "https://software-carpentry.org"
+scss21_site: "https://sinergia-connectomics-summerschool-2021.github.io/#intro"
 template_repo: "https://github.com/swcarpentry/styles"
 example_repo: "https://github.com/swcarpentry/lesson-example"
 example_site: "https://swcarpentry.github.com/lesson-example"
@@ -37,7 +38,7 @@ rn_site: "https://repronim.github.io"
 rn_github: "https://github.com/repronim"
 
 # Start time in minutes (540 is 09:00 am)
-start_time: 540
+start_time: 570
 
 # Specify that things in the episodes collection should be output.
 collections:
