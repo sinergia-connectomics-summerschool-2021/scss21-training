@@ -52,8 +52,21 @@ displayed if the 'eventbrite' field in the header is not set.
 
 <h2 id="general">General Information</h2>
 
-{% include intro.html %}
-{% include who.html %}
+<p id="info">
+  <a href="{{site.scss21_site}}">Brain Dynamics on the Connectome Sinergia Online Summer School 2021</a>
+  aims to introduce advanced topics in multimodal brain connectomics.
+  The lectures follow the structure of a pipeline to estimate structural connectivity from diffusion MRI data,
+  dynamic functional connectivity from M/EEG recordings and integrate them together with computational modeling.
+</p>
+
+<p id="who">
+  <strong>Who:</strong>
+  The course is aimed at graduate students and other researchers.
+  <strong>
+    You don't need to have any previous knowledge of the tools
+    that will be presented at the workshop before it is highly recommended to be familiar with the bash.
+  </strong>
+</p>
 
 {% assign begin_address = page.address | slice: 0, 4 | downcase  %}
 {% if page.address == "online" %}
