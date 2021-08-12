@@ -34,6 +34,8 @@ template_repo: "https://github.com/swcarpentry/styles"
 example_repo: "https://github.com/swcarpentry/lesson-example"
 example_site: "https://swcarpentry.github.com/lesson-example"
 rn_site: "https://repronim.github.io"
+sc_site: "https://sinergiaconsortium.bitbucket.io/"
+scss21_site: "https://sinergia-connectomics-summerschool-2021.github.io"
 #rn_site: "https://repronim.org"
 rn_github: "https://github.com/repronim"
 
