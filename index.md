@@ -52,8 +52,8 @@ displayed if the 'eventbrite' field in the header is not set.
 
 <h2 id="general">General Information</h2>
 
-    {% include intro.html %}
-    {% include who.html %}
+{% include intro.html %}
+{% include who.html %}
 
 {% assign begin_address = page.address | slice: 0, 4 | downcase  %}
 {% if page.address == "online" %}
@@ -268,13 +268,7 @@ of code below the Schedule `<h2>` header below with
 
 <h2 id="schedule">Schedule</h2>
 
-    {% include schedule.html %}
-
-    {% comment %}
-    Edit/replace the text above if you want to include a schedule table.
-    See the contents of the _includes/custom-schedule.html file for an example of
-    how one of these schedule tables is constructed.
-    {% endcomment %}
+{% include schedule.html %}
 
 <hr/>
 
