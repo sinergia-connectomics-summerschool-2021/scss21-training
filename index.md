@@ -64,7 +64,7 @@ displayed if the 'eventbrite' field in the header is not set.
   The course is aimed at graduate students and other researchers.
   <strong>
     You don't need to have any previous knowledge of the tools
-    that will be presented at the workshop before it is highly recommended to be familiar with the bash.
+    that will be presented at the workshop before. However, it is highly recommended to be familiar with neuroimaging and confortable with scripting/programming in bash, python, and matlab.
   </strong>
 </p>
 
