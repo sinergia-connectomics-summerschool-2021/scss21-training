@@ -6,9 +6,9 @@ permalink: /license/
 
 ## Instructional Material
 
-ReproNim instructional material here and thus all derived forms is based on excellent [NeuroHackWeek](https://neurohackweek.github.io) instructional materials, and any derivative work is released under the same license (authors' copyright).
-Instructional material is made available under the [Creative Commons Attribution license][cc-by-human]. The following is a human-readable
-summary of (and not a substitute for) the [full legal text of the CC BY 4.0 license][cc-by-legal].
+This work is derived from work that is Copyright © [ReproNim](https://github.com/ReproNim/sfn2018-training) and [NeuroHackWeek](https://neurohackweek.github.io), and any derivative work is released under the same license (authors' copyright). 
+Instructional material is made available under the [Creative Commons Attribution license][cc-by-human] and changes made are documented in the version control history of this repository.
+The following is a human-readable summary of (and not a substitute for) the [full legal text of the CC BY 4.0 license][cc-by-legal].
 
 You are free:
 
@@ -24,7 +24,8 @@ Under the following terms:
 
 * **Attribution**---You must give appropriate credit (mentioning that
   your work is derived from work that is Copyright © Neurohackweek and ReproNim and, where
-  practical, linking to http://neurohackweek.github.io/ and http://repronim.github.io), provide a [link to the
+  practical, linking to https://sinergia-connectomics-summerschool-2021.github.io/scss21-training,
+  http://neurohackweek.github.io/ and http://repronim.github.io), provide a [link to the
   license][cc-by-human], and indicate if changes were made. You may do
   so in any reasonable manner, but not in any way that suggests the
   licensor endorses you or your use.
@@ -73,9 +74,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ## Templates
 
 The templates used to create these lessons were created by [Software
-Carpentry](http://software-carpentry.org/). See AUTHORS for a list of contributors to the template. In accordance with the terms of the
-original license, the changes made are documented in the version control history
-of this repository, and other repositories in [the ReproNim github website][rp-github].
+Carpentry](http://software-carpentry.org/). See AUTHORS for a list of contributors to the template.
+In accordance with the terms of the original license, the changes made are documented in the version control history
+of this repository.
 
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
