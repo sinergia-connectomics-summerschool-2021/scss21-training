@@ -10,4 +10,4 @@ objectives:
 
 Hand over the stage to Patric.
 
-- [Presentation](../presentations/containers/presentation/)
+- Link to presentation TBC

@@ -10,4 +10,4 @@ objectives:
 
 Hand over the stage to Jonathan.
 
-- [Presentation](../presentations/containers/presentation/)
+- Link to presentation TBC

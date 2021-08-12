@@ -1,7 +1,13 @@
 ---
-title: "</a><b>Introduction</b><a>"
+title: "Lecture 2.2: Functional Connectivity (FC) and Dynamical FC"
 teaching: 30
 exercises: 0
-Link to presentation: https://osf.io/u28sb/
+questions:
+- TBC
+objectives:
+- TBC
 ---
-[The presentation here](https://osf.io/u28sb/)
+
+Hand over the stage to Gijs.
+
+- Link to presentation TBC
