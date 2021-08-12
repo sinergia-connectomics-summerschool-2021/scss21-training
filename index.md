@@ -11,7 +11,7 @@ humandate: "Oct 11-12, 2021"    # human-readable dates for the workshop (e.g., "
 startdate: 2021-10-11      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2021-10-12        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Sebastien Tourbier", "Isota Rigoni", "Nicolas Roehri", "Maria Rubega", "Jolan Heyse", "Joan Rué-Queralt", "Katharina Glomb", "Ane Lopez-Gonzalez", "Manel Vila-Vida"] 
-helper: ["helper one", "helper two"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper:  # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["joan.rue-quelralt@chuv.ch","sebastien.tourbier@alumni.epfl.ch"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
