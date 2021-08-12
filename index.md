@@ -1,5 +1,5 @@
 ---
-layout: lesson
+layout: workshop
 ---
 
 These lectures and hands-on exercises are a part of the training curriculum from
