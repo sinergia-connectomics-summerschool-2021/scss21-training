@@ -58,15 +58,6 @@ displayed if the 'eventbrite' field in the header is not set.
   dynamic functional connectivity from M/EEG recordings and integrate them together with computational modeling.
 </p>
 
-<p id="who">
-  <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
-  <strong>
-    You don't need to have any previous knowledge of the tools
-    that will be presented at the workshop before. However, it is highly recommended to be familiar with neuroimaging and the UNIX shell environment, and be confortable with scripting/programming in python and matlab.
-  </strong>
-</p>
-
 {% assign begin_address = page.address | slice: 0, 4 | downcase  %}
 {% if page.address == "online" %}
 {% assign online = "true_private" %}
@@ -154,8 +145,8 @@ special instructions.
 </p>
 {% else %}
   We are dedicated to providing a positive and accessible learning environment for all. Please
-  notify the instructors in advance of the workshop if you require any accommodations or if there is
-  anything we can do to make this workshop more accessible to you.
+  notify the instructors in advance of the workshop if there is anything we can do to make
+  this workshop more accessible to you.
 </p>
 {% endif %}
 
@@ -186,8 +177,8 @@ Display the contact email address set in the configuration file.
 
 <p id="roles">
   <strong>Roles:</strong>
-  To learn more about the roles at the workshop (who will be doing what),
-  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
+  To learn more about the roles at the Summer School (who will be doing what),
+  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">the Carpentries Workshop FAQ</a>.
 </p>
 
 {% comment %}
@@ -207,7 +198,14 @@ Edit the text to match who can attend the workshop. For instance:
 {% endcomment %}
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
-    This workshop is open to anyone from engineers to doctors
+    This summer school is open to anyone from engineers to doctors.
+    <strong>
+        You don't need to have any previous knowledge of the tools that will be presented at the workshop before. However, it is highly recommended to be familiar with neuroimaging, the UNIX shell environment, and be confortable with scripting/programming in python and matlab.
+    </strong>
+    <strong>
+        Note that his summer school is subject to online registration via <a href="https://sinergia-connectomics-summerschool-2021.github.io/#call-to-action">this form</a>.
+        However, a maximal number of 70 participants has been reached and anyone applying now will be put on a waiting list.
+    </strong>
 </p>
 
 
