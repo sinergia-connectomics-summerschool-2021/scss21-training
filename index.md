@@ -85,9 +85,6 @@ Edit the text to match who can attend the workshop. For instance:
     </strong>
 </p>
 
-
-<hr/>
-
 {% assign begin_address = page.address | slice: 0, 4 | downcase  %}
 {% if page.address == "online" %}
 {% assign online = "true_private" %}
