@@ -58,6 +58,36 @@ displayed if the 'eventbrite' field in the header is not set.
   dynamic functional connectivity from M/EEG recordings and integrate them together with computational modeling.
 </p>
 
+{% comment %}
+WHO CAN ATTEND?
+
+If you would like to specify who can attend the workshop,
+you can use the section below.
+
+Move the 'endcomment' tag above the beginning of the following
+<p> tag to make this section visible.
+
+Edit the text to match who can attend the workshop. For instance:
+- This workshop is open to affiliates to ABC university.
+- This workshop is open to the public.
+- If you are interested in attending this workshop, contact me@example.com
+  for more information
+{% endcomment %}
+<p id="who-can-attend">
+    <strong>Who can attend?:</strong>
+    This summer school is open to anyone from engineers to doctors.
+    <strong>
+        You don't need to have any previous knowledge of the tools that will be presented at the workshop before. However, it is highly recommended to be familiar with neuroimaging, the UNIX shell environment, and be confortable with scripting/programming in python and matlab.
+    </strong>
+    Note that his summer school is subject to online registration via <a href="https://sinergia-connectomics-summerschool-2021.github.io/#call-to-action">this form</a>.
+    <strong>
+        However, a maximal number of 70 participants has been reached and anyone applying now will be put on a waiting list.
+    </strong>
+</p>
+
+
+<hr/>
+
 {% assign begin_address = page.address | slice: 0, 4 | downcase  %}
 {% if page.address == "online" %}
 {% assign online = "true_private" %}
@@ -181,35 +211,7 @@ Display the contact email address set in the configuration file.
   refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">the Carpentries Workshop FAQ</a>.
 </p>
 
-{% comment %}
-WHO CAN ATTEND?
-
-If you would like to specify who can attend the workshop,
-you can use the section below.
-
-Move the 'endcomment' tag above the beginning of the following
-<p> tag to make this section visible.
-
-Edit the text to match who can attend the workshop. For instance:
-- This workshop is open to affiliates to ABC university.
-- This workshop is open to the public.
-- If you are interested in attending this workshop, contact me@example.com
-  for more information
-{% endcomment %}
-<p id="who-can-attend">
-    <strong>Who can attend?:</strong>
-    This summer school is open to anyone from engineers to doctors.
-    <strong>
-        You don't need to have any previous knowledge of the tools that will be presented at the workshop before. However, it is highly recommended to be familiar with neuroimaging, the UNIX shell environment, and be confortable with scripting/programming in python and matlab.
-    </strong>
-    <strong>
-        Note that his summer school is subject to online registration via <a href="https://sinergia-connectomics-summerschool-2021.github.io/#call-to-action">this form</a>.
-        However, a maximal number of 70 participants has been reached and anyone applying now will be put on a waiting list.
-    </strong>
-</p>
-
-
-<hr/>
+</hr>
 
 {% comment%}
 CODE OF CONDUCT
