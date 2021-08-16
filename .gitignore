@@ -5,3 +5,4 @@
 .sass-cache
 _site
 __pycache__
+.jekyll-cache
