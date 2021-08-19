@@ -78,8 +78,9 @@ highlighter: rouge
 
 markdown: kramdown
 kramdown:
+  syntax_highlighter: rouge
   math_engine: mathjax
   math_engine_opts:
-    preview: true   # not default but better acessibility
+    preview: true   # not default but better accessibility
 
 theme: jekyll-theme-leap-day
