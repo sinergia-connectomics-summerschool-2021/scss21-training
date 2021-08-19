@@ -1,0 +1,117 @@
+{
+    "Global": {
+        "process_type": "diffusion",
+        "diffusion_imaging_model": "DTI",
+        "subjects": [
+            "sub-01"
+        ],
+        "subject": "sub-01",
+        "version": "v3.0.0-RC4"
+    },
+    "preprocessing_stage": {
+        "description": "description",
+        "denoising": false,
+        "denoising_algo": "MRtrix (MP-PCA)",
+        "dipy_noise_model": "Rician",
+        "bias_field_correction": false,
+        "bias_field_algo": "ANTS N4",
+        "eddy_current_and_motion_correction": true,
+        "eddy_correction_algo": "FSL eddy_correct",
+        "eddy_correct_motion_correction": true,
+        "partial_volume_estimation": true,
+        "fast_use_priors": true,
+        "resampling": [
+            1,
+            1,
+            1
+        ],
+        "interpolation": "interpolate"
+    },
+    "registration_stage": {
+        "pipeline": "Diffusion",
+        "registration_mode": "ANTs",
+        "use_float_precision": false,
+        "ants_interpolation": "Linear",
+        "ants_bspline_interpolation_parameters": [
+            3
+        ],
+        "ants_gauss_interpolation_parameters": [
+            5.0,
+            5.0
+        ],
+        "ants_multilab_interpolation_parameters": [
+            5.0,
+            5.0
+        ],
+        "ants_lower_quantile": 0.005,
+        "ants_upper_quantile": 0.995,
+        "ants_convergence_thresh": 1e-06,
+        "ants_convergence_winsize": 10,
+        "ants_linear_gradient_step": 0.1,
+        "ants_linear_cost": "MI",
+        "ants_linear_sampling_perc": 0.25,
+        "ants_linear_sampling_strategy": "Regular",
+        "ants_perform_syn": true,
+        "ants_nonlinear_gradient_step": 0.1,
+        "ants_nonlinear_cost": "CC",
+        "ants_nonlinear_update_field_variance": 3.0,
+        "uses_qform": true,
+        "dof": 6,
+        "fsl_cost": "normmi",
+        "no_search": true,
+        "init": "header",
+        "contrast_type": "dti",
+        "apply_to_eroded_wm": true,
+        "apply_to_eroded_csf": true,
+        "apply_to_eroded_brain": false
+    },
+    "diffusion_stage": {
+        "diffusion_imaging_model": "DTI",
+        "dilate_rois": true,
+        "dilation_kernel": "Box",
+        "dilation_radius": 1,
+        "recon_processing_tool": "MRtrix",
+        "tracking_processing_tool": "MRtrix",
+        "mrtrix_recon_config.flip_table_axis": [],
+        "mrtrix_recon_config.local_model": true,
+        "mrtrix_recon_config.lmax_order": 4,
+        "mrtrix_recon_config.normalize_to_b0": false,
+        "mrtrix_recon_config.single_fib_thr": 0.7,
+        "mrtrix_recon_config.recon_mode": "Probabilistic",
+        "mrtrix_recon_config.imaging_model": "DTI",
+        "mrtrix_tracking_config.tracking_mode": "Deterministic",
+        "mrtrix_tracking_config.sd": true,
+        "mrtrix_tracking_config.desired_number_of_tracks": 5000000,
+        "mrtrix_tracking_config.step_size": 0.5,
+        "mrtrix_tracking_config.min_length": 5.0,
+        "mrtrix_tracking_config.max_length": 300.0,
+        "mrtrix_tracking_config.angle": 45.0,
+        "mrtrix_tracking_config.cutoff_value": 0.05,
+        "mrtrix_tracking_config.use_act": true,
+        "mrtrix_tracking_config.seed_from_gmwmi": false,
+        "mrtrix_tracking_config.crop_at_gmwmi": false,
+        "mrtrix_tracking_config.backtrack": false,
+        "mrtrix_tracking_config.sift": true,
+        "diffusion_model": "Deterministic"
+    },
+    "connectome_stage": {
+        "output_types": [
+            "gPickle",
+            "mat",
+            "graphml"
+        ],
+        "connectivity_metrics": [
+            "Fiber number",
+            "Fiber length",
+            "Fiber density",
+            "Fiber proportion",
+            "Normalized fiber density",
+            "ADC",
+            "gFA"
+        ],
+        "compute_curvature": true
+    },
+    "Multi-processing": {
+        "number_of_cores": 1
+    }
+}
