@@ -32,6 +32,10 @@ layout: false
 
 - Distributed as a BIDS App to promote reusability, reproducibility and replicatibility
 
+---
+
+## What is Connectome Mapper 3?
+
 - Come with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate:
 
     - the configuration of all pipeline stages,
@@ -44,13 +48,7 @@ layout: false
 
 ## CMP3 pipelines
 
-- **Anatomical pipeline** Compute the different cortical parcellations from anatomical MRI data
-
-- **Diffusion pipeline** Compute the different structural brain connectivity matrices from diffusion MRI data
-
-- **fMRI pipeline** Compute the different brain functional connectivity matrices based on the Pearson's correlation between time-series of the cortical parcels
-
-<img src="https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png" height="300" style="text-align: center">
+<img src="https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png" height="480" style="text-align: center">
 
 Source: [https://connectome-mapper-3.readthedocs.io/en/latest/\_images/flowchart_bidsapp.png](https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png)
 
@@ -72,7 +70,7 @@ Source: [https://connectome-mapper-3.readthedocs.io/en/latest/\_images/flowchart
 
 ## Exercise 1: Use `cmpbidsappmanager` to configure the anatomical and diffusion pipelines 
 
-**Goal** Learn how to configure CMP3 pipelines and create their configuration files with `cmpbidsappmanager`
+Learn how to configure CMP3 pipelines and create their configuration files with `cmpbidsappmanager`
 
 ---
 
@@ -143,7 +141,7 @@ cmpbidsappmanger
 
 ## Exercise 3: Use `cmpbidsappmanager` to check pipeline outputs with external viewers
 
-**Goal** Learn how to inspect the quality of the different stage outputs
+Learn how to inspect the quality of the different stage outputs
 
 ---
 
@@ -185,14 +183,14 @@ cmpbidsappmanger
 
 ## Exercise 4: Run directly the BIDSApp commandline interface
 
-**Goal** Learn how to run directly the BIDSApp commandline interface of CMP3
+Learn how to run directly the BIDSApp commandline interface of CMP3
 
 ---
 
 ## Run the BIDSApp commandline interface of CMP3
 
 - In a terminal, run the following command:
-```
+```bash
 docker run -it --rm \
  -v /home/sinergiasummerschool/Data/ds003505:/bids_dir \
  -v /home/sinergiasummerschool/Data/ds003505/derivatives:/output_dir \
@@ -200,8 +198,8 @@ docker run -it --rm \
  -v /home/sinergiasummerschool/Data/ds003505/code/ref_anatomical_config.json:/code/ref_anatomical_config.json \
  -v /home/sinergiasummerschool/Data/ds003505/code/ref_diffusion_config.json:/code/ref_diffusion_config.json \
  -u "$(id -u)":"$(id -g)" \
- sebastientourbier/connectomemapper-bidsapp:v3.0.0-RC4 \  # CMP BIDS App Docker image
- /bids_dir /output_dir participant --participant_label 01 \  # BIDS App argument sets
+ sebastientourbier/connectomemapper-bidsapp:v3.0.0-RC4 \
+ /bids_dir /output_dir participant --participant_label 01 \
  --anat_pipeline_config /code/ref_anatomical_config.json \
  --dwi_pipeline_config /code/ref_diffusion_config.json \
  --fs_license /bids_dir/code/license.txt
