@@ -191,18 +191,19 @@ Learn how to run directly the BIDSApp commandline interface of CMP3
 
 - In a terminal, run the following command:
 ```bash
+BIDS_DIR="/home/sinergiasummerschool/Data/ds003505"
 docker run -it --rm \
- -v /home/sinergiasummerschool/Data/ds003505:/bids_dir \
- -v /home/sinergiasummerschool/Data/ds003505/derivatives:/output_dir \
- -v /home/sinergiasummerschool/Softwares/freesurfer/license.txt:/bids_dir/code/license.txt \
- -v /home/sinergiasummerschool/Data/ds003505/code/ref_anatomical_config.json:/code/ref_anatomical_config.json \
- -v /home/sinergiasummerschool/Data/ds003505/code/ref_diffusion_config.json:/code/ref_diffusion_config.json \
+ -v "$BIDS_DIR":"/bids_dir" \
+ -v "$BIDS_DIR/derivatives":"/output_dir" \
+ -v "$HOME/Softwares/freesurfer/license.txt":"/bids_dir/code/license.txt" \
+ -v "$BIDS_DIR/code/ref_anatomical_config.json":"/code/ref_anatomical_config.json" \
+ -v "$BIDS_DIR/code/ref_diffusion_config.json":"/code/ref_diffusion_config.json" \
  -u "$(id -u)":"$(id -g)" \
  sebastientourbier/connectomemapper-bidsapp:v3.0.0-RC4 \
- /bids_dir /output_dir participant --participant_label 01 \
- --anat_pipeline_config /code/ref_anatomical_config.json \
- --dwi_pipeline_config /code/ref_diffusion_config.json \
- --fs_license /bids_dir/code/license.txt
+ "/bids_dir" "/output_dir" participant --participant_label "01" \
+ --anat_pipeline_config "/code/ref_anatomical_config.json" \
+ --dwi_pipeline_config "/code/ref_diffusion_config.json" \
+ --fs_license "/bids_dir/code/license.txt"
 ```
 ---
 
