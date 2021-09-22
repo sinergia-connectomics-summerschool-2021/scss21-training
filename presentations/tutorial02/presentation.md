@@ -78,7 +78,7 @@ Learn how to configure the anatomical and diffusion pipelines and create their c
 
 - Open a terminal and launch `cmpbidsmanager`:
 ```
-cmpbidsappmanger
+cmpbidsappmanager
 ```
 
 ---
