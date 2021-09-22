@@ -41,7 +41,7 @@ layout: false
 
 ---
 
-### Store dataset path
+## Store dataset path
 
 - Store dataset path in `BIDS_DIR` environment variable
 ```
@@ -50,7 +50,7 @@ export BIDS_DIR="$HOME/Data/ds003505-sample"
 
 ---
 
-### Check the current file organization and naming
+## Check the current file organization and naming
 
 You can either use the command line
 ```
@@ -61,7 +61,7 @@ or use the graphical file manager.
 
 ---
 
-### Create the BIDS folder structure
+## Create the BIDS folder structure
 
 - Create the BIDS folder structure `sub-01/anat` and `sub-01/dwi` for anatomical and diffusion MRI data
 ```
@@ -71,7 +71,7 @@ mkdir -p $BIDS_DIR/sub-01/dwi;
 
 ---
 
-### Adopt BIDS file naming
+## Adopt BIDS file naming
 
 
 
@@ -93,7 +93,7 @@ mv $BIDS_DIR/diffusion.bvec $BIDS_DIR/sub-01/dwi/sub-01_dwi.bvec
 
 ---
 
-### Validate dataset with the `bids-validator`
+## Validate dataset with the bids-validator
 
 - Validate the dataset with the online [`bids-validator`](https://bids-standard.github.io/bids-validator/):
 
@@ -136,7 +136,7 @@ print(layout)
 
 ---
 
-## Get the list of T1w images available for `sub-01`
+## Get the list of T1w images available for sub-01
 
 - Use the `get()` method to get the list of T1w images available for `sub-01`:
 ```python
@@ -152,7 +152,7 @@ print(t1_files)
 
 ---
 
-## Get the list of the diffusion images available for `sub-01`
+## Get the list of the diffusion images available for sub-01
 
 - Provide the argument of `get()` method in a python dictionary to get the list of the diffusion images available for `sub-01`:
 ```python
@@ -168,7 +168,7 @@ print(dwi_files)
 
 ---
 
-## Get the EEG task list of `sub-01`
+## Get the EEG task list of sub-01
 
 - Use the `get_tasks()` method to get the list of available tasks:
 ```python
