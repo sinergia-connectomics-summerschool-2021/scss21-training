@@ -151,7 +151,7 @@ Learn how to inspect the quality of the different stage outputs
 
 ---
 
-## Select to view outputs for `sub-01` 
+## Select to view outputs for sub-01
 
 - Select `sub-01` from the list
 
