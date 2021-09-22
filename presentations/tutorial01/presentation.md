@@ -1,12 +1,14 @@
 name: inverse
 layout: true
 class: center, middle, inverse
+
 ---
+
 # Tutorial 01: Brain Imaging Data Structure
-### Sinergia Brain Dynamics on the Connectome Summer School 2021
 ### sebastien.tourbier@alumni.epfl.ch  |  CC-BY
 
 ---
+
 layout: false
 
 ## What is Brain Imaging Data Structure?
