@@ -109,7 +109,7 @@ cmpbidsappmanger
 
 ## Exercise 2: Use cmpbidsappmanager to run the BIDSApp
 
-**Goal** Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
+Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 
 ---
 
