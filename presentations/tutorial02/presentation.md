@@ -4,11 +4,9 @@ class: center, middle, inverse
 
 ---
 
-# Tutorial 02: Anatomical and Diffusion MRI Pipelines
+# Tutorial 02: Anatomical and Diffusion <br>MRI Pipelines
 
 ### sebastien.tourbier@alumni.epfl.ch  |  CC-BY
-
-#### Brain Dynamics on the Connectome <br> Sinergia Summer School 2021
 
 .footer[<br><br><img src="https://sinergia-connectomics-summerschool-2021.github.io/img/SummerSchool2021_website_logo.png" height="80"><img src="https://sinergia-connectomics-summerschool-2021.github.io/img/logo_sponsors.png" height="80">]
 
