@@ -4,7 +4,7 @@ class: center, middle, inverse
 
 ---
 
-# Tutorial 02: Anatomical and Diffusion <br>MRI Pipelines
+# Tutorial 02: <br>Anatomical and Diffusion <br>MRI Pipelines
 
 ### sebastien.tourbier@alumni.epfl.ch  |  CC-BY
 
