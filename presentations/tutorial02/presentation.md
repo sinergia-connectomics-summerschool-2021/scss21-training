@@ -48,7 +48,7 @@ layout: false
 
 ## CMP3 pipelines
 
-<img src="https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png" height="480" style="text-align: center">
+<img src="https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png" height="440" style="text-align: center">
 
 Source: [https://connectome-mapper-3.readthedocs.io/en/latest/\_images/flowchart_bidsapp.png](https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png)
 
