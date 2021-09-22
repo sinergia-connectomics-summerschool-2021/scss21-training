@@ -50,7 +50,7 @@ layout: false
 
 - **fMRI pipeline** Compute the different brain functional connectivity matrices based on the Pearson's correlation between time-series of the cortical parcels
 
-<img src="https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png" width="auto" height="auto">
+<img src="https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png" height="340">
 
 Source: [https://connectome-mapper-3.readthedocs.io/en/latest/\_images/flowchart_bidsapp.png](https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png)
 
