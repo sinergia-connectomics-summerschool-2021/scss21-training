@@ -20,7 +20,7 @@ layout: false
 
 - CMP3 pipelines
 
-- Generate the 5-scale Lausanne2018 brain parcellations and the brain structural connectivity matrices
+- Generate the brain parcellations and the structural connectivity matrices with CMP3
 
 ---
 
@@ -64,17 +64,17 @@ Source: [https://connectome-mapper-3.readthedocs.io/en/latest/\_images/flowchart
 
 ---
 
-## Generate the 5-scale Lausanne2018 brain parcellations and the brain structural connectivity matrices
+## Generate the brain parcellations and the structural connectivity matrices with CMP3
 
 ---
 
-## Exercise 1: Use `cmpbidsappmanager` to configure the anatomical and diffusion pipelines 
+## Exercise 1: Use cmpbidsappmanager to configure the pipelines 
 
-Learn how to configure CMP3 pipelines and create their configuration files with `cmpbidsappmanager`
+Learn how to configure the anatomical and diffusion pipelines and create their configuration files with `cmpbidsappmanager`
 
 ---
 
-## Launch `cmpbidsappmanager`
+## Launch cmpbidsappmanager
 
 - Open a terminal and launch `cmpbidsmanager`:
 ```
@@ -107,7 +107,7 @@ cmpbidsappmanger
 
 ---
 
-## Exercise 2: Use `cmpbidsappmanager` to run the BIDSApp
+## Exercise 2: Use cmpbidsappmanager to run the BIDSApp
 
 **Goal** Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 
@@ -139,7 +139,7 @@ cmpbidsappmanger
 
 ---
 
-## Exercise 3: Use `cmpbidsappmanager` to check pipeline outputs with external viewers
+## Exercise 3: Use cmpbidsappmanager to check pipeline outputs with external viewers
 
 Learn how to inspect the quality of the different stage outputs
 
