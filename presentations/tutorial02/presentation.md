@@ -191,8 +191,8 @@ Learn how to run directly the BIDSApp commandline interface of CMP3
 
 - In a terminal, run the following command:
 ```bash
-BIDS_DIR="/home/sinergiasummerschool/Data/ds003505"
-docker run -it --rm \
+$ export BIDS_DIR="/home/sinergiasummerschool/Data/ds003505"
+$ docker run -it --rm \
  -v "$BIDS_DIR":"/bids_dir" \
  -v "$BIDS_DIR/derivatives":"/output_dir" \
  -v "$HOME/Softwares/freesurfer/license.txt":"/bids_dir/code/license.txt" \
