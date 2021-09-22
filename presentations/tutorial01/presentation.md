@@ -52,13 +52,12 @@ export BIDS_DIR="$HOME/Data/ds003505-sample"
 
 ### Check the current file organization and naming
 
-You can either use the command line:
-
+You can either use the command line
 ```
 tree $BIDS_DIR
 ```
 
-or use the graphical file manager
+or use the graphical file manager.
 
 ---
 
@@ -116,7 +115,6 @@ ipython
 ```
 
 - Import the BIDSLayout class from the pybids library
-
 ```python
 from bids import BIDSLayout
 ```
@@ -126,7 +124,6 @@ from bids import BIDSLayout
 ## Initialize a BIDSLayout object
 
 - Initialize a BIDSLayout object with the path of summerschool sample dataset
-
 ```python
 # Create the BIDSLayout object representing the summerschool sample dataset
 layout = BIDSLayout("$HOME/Data/ds003505")
@@ -142,7 +139,6 @@ print(layout)
 ## Get the list of T1w images available for `sub-01`
 
 - Use the `get()` method to get the list of T1w images available for `sub-01`:
-
 ```python
 # Get the list of T1w images available for sub-01
 t1_files = layout.get(
@@ -159,7 +155,6 @@ print(t1_files)
 ## Get the list of the diffusion images available for `sub-01`
 
 - Provide the argument of `get()` method in a python dictionary to get the list of the diffusion images available for `sub-01`:
-
 ```python
 dwi_query = {
     "subject": "01",
@@ -176,7 +171,6 @@ print(dwi_files)
 ## Get the EEG task list of `sub-01`
 
 - Use the `get_tasks()` method to get the list of available tasks:
-
 ```python
 eeg_tasks = layout.get_tasks()
 ```
