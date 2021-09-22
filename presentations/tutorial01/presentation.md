@@ -41,12 +41,21 @@ layout: false
 
 ---
 
+### Store dataset path
+
+- Store dataset path in `BIDS_DIR` environment variable
+```
+export BIDS_DIR="$HOME/Data/ds003505-sample"
+```
+
+---
+
 ### Check the current file organization and naming
 
 You can either use the command line:
 
 ```
-tree $HOME/Data/ds003505-sample
+tree $BIDS_DIR
 ```
 
 or use the graphical file manager
@@ -57,28 +66,30 @@ or use the graphical file manager
 
 - Create the BIDS folder structure `sub-01/anat` and `sub-01/dwi` for anatomical and diffusion MRI data
 ```
-mkdir -p $HOME/Data/ds003505-sample/sub-01/anat;
-mkdir -p $HOME/Data/ds003505-sample/sub-01/dwi;
+mkdir -p $BIDS_DIR/sub-01/anat;
+mkdir -p $BIDS_DIR/sub-01/dwi;
 ```
 
 ---
 
 ### Adopt BIDS file naming
 
+
+
 - Rename demographical TSV and JSON table data accordingly to BIDS
 ```
-mv $HOME/Data/ds003505-sample/subjects_demo.tsv $HOME/Data/ds003505-sample/participants.tsv
-mv $HOME/Data/ds003505-sample/subjects_demo.tsv $HOME/Data/ds003505-sample/participants.json
+mv $BIDS_DIR/subjects_demo.tsv $BIDS_DIR/participants.tsv
+mv $BIDS_DIR/subjects_demo.tsv $BIDS_DIR/participants.json
 ```
 
 - Rename and move anatomical and diffusion MRI data to `sub-01/anat` and `sub-01/dwi` accordingly to BIDS
 ```
-mv $HOME/Data/ds003505-sample/T1w.nii.gz $HOME/Data/ds003505-sample/sub-01/anat/sub-01_T1w.nii.gz
-mv $HOME/Data/ds003505-sample/T1w.json $HOME/Data/ds003505-sample/sub-01/anat/sub-01_T1w.json
-mv $HOME/Data/ds003505-sample/diffusion.nii.gz $HOME/Data/ds003505-sample/sub-01/dwi/sub-01_dwi.nii.gz
-mv $HOME/Data/ds003505-sample/diffusion.json $HOME/Data/ds003505-sample/sub-01/dwi/sub-01_dwi.json
-mv $HOME/Data/ds003505-sample/diffusion.bval $HOME/Data/ds003505-sample/sub-01/dwi/sub-01_dwi.bval
-mv $HOME/Data/ds003505-sample/diffusion.bvec $HOME/Data/ds003505-sample/sub-01/dwi/sub-01_dwi.bvec
+mv $BIDS_DIR/T1w.nii.gz $BIDS_DIR/sub-01/anat/sub-01_T1w.nii.gz
+mv $BIDS_DIR/T1w.json $BIDS_DIR/sub-01/anat/sub-01_T1w.json
+mv $BIDS_DIR/diffusion.nii.gz $BIDS_DIR/sub-01/dwi/sub-01_dwi.nii.gz
+mv $BIDS_DIR/diffusion.json $BIDS_DIR/sub-01/dwi/sub-01_dwi.json
+mv $BIDS_DIR/diffusion.bval $BIDS_DIR/sub-01/dwi/sub-01_dwi.bval
+mv $BIDS_DIR/diffusion.bvec $BIDS_DIR/sub-01/dwi/sub-01_dwi.bvec
 ```
 
 ---
@@ -105,6 +116,7 @@ ipython
 ```
 
 - Import the BIDSLayout class from the pybids library
+
 ```python
 from bids import BIDSLayout
 ```
@@ -114,6 +126,7 @@ from bids import BIDSLayout
 ## Initialize a BIDSLayout object
 
 - Initialize a BIDSLayout object with the path of summerschool sample dataset
+
 ```python
 # Create the BIDSLayout object representing the summerschool sample dataset
 layout = BIDSLayout("$HOME/Data/ds003505")
@@ -129,6 +142,7 @@ print(layout)
 ## Get the list of T1w images available for `sub-01`
 
 - Use the `get()` method to get the list of T1w images available for `sub-01`:
+
 ```python
 # Get the list of T1w images available for sub-01
 t1_files = layout.get(
@@ -145,6 +159,7 @@ print(t1_files)
 ## Get the list of the diffusion images available for `sub-01`
 
 - Provide the argument of `get()` method in a python dictionary to get the list of the diffusion images available for `sub-01`:
+
 ```python
 dwi_query = {
     "subject": "01",
@@ -161,6 +176,7 @@ print(dwi_files)
 ## Get the EEG task list of `sub-01`
 
 - Use the `get_tasks()` method to get the list of available tasks:
+
 ```python
 eeg_tasks = layout.get_tasks()
 ```
