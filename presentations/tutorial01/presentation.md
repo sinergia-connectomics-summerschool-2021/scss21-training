@@ -5,7 +5,10 @@ class: center, middle, inverse
 ---
 
 # Tutorial 01: Brain Imaging Data Structure
-### sebastien.tourbier@alumni.epfl.ch  |  CC-BY
+
+### Sinergia Brain Dynamics on the Connectome Summer School 2021
+
+#### sebastien.tourbier@alumni.epfl.ch  |  CC-BY
 
 ---
 
@@ -13,7 +16,8 @@ layout: false
 
 ## What is Brain Imaging Data Structure?
 
-- Brain Imaging Data Structure (`BIDS`) is a file organization and naming scheme for neuroimaging data.
+- Brain Imaging Data Structure (`BIDS`) is a file organization and naming scheme for neuroimaging data
+
 - Originally developed for MRI data, extended to MEG and EEG
 
 ---
@@ -24,15 +28,16 @@ layout: false
  available `VEPCON` dataset. The data comes
  preloaded in the virtual machine of the summer school.
 
-** To ensure you can follow along, please check
- that you have the virtual machine (VM) of the summer school running.
+- To ensure you can follow along, please check that you have the
+ virtual machine (VM) of the summer school running.
 
 ---
 
 ## Exercise 1: Create a BIDS-compliant dataset
 
 - The summer school sample dataset has been modified such that it does not comply anymore with the BIDS standard
-- The goal of this exercise is to make this dataset compliant to the BIDS standard again.
+
+- The goal of this exercise is to make this dataset compliant to the BIDS standard again
 
 ---
 
@@ -45,6 +50,8 @@ tree $HOME/Data/ds003505-sample
 ```
 
 or use the graphical file manager
+
+---
 
 ### Create the BIDS folder structure
 
