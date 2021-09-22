@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 #### sebastien.tourbier@alumni.epfl.ch  |  CC-BY
 
-.footer[<img src="https://sinergia-connectomics-summerschool-2021.github.io/img/logo_sponsors.png" width="100%">]
+.footer[<img src="https://sinergia-connectomics-summerschool-2021.github.io/img/logo_sponsors.png" height="15%">]
 
 ---
 
