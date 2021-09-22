@@ -18,8 +18,8 @@
 
 %% load data and basic variables
 
-load('SC_original')
-load('ts_subj_1.mat')
+load('SC_original') %Structural connectivity
+load('ts_subj_1.mat') %BOLD time-serie
 
 %Basic parameters
 Tmax = 276;%Check whats your tmax.
@@ -33,7 +33,7 @@ rng('shuffle');
 
 
 ap=0.0005;%a values
-idxSub=1;%
+idxSub=1;%subject
 nNodes = length(C);
 nSubs = ldata; 
 si = 1:ldata; 
@@ -67,7 +67,7 @@ r = zeros(nNodes, nNodes, nSubs);
 ts = zeros(nNodes, Tmax, nSubs);
 
 i=1;
-ts(:,:,1) = squeeze(ts_all(subj,:,:));
+ts(:,:,1) = squeeze(ts_subj_1(subj,:,:));
 r(:,:,1) = corrcoef(ts(:,:,1)');
 
 FC_emp=mean(r,3);
@@ -98,7 +98,7 @@ Wn=[flp/fnq fhi/fnq];                       % butterworth bandpass non-dimension
 
 PowSpect_filt_narrow = zeros(nFreqs, nNodes, nSubs);
 for seed=1:nNodes
-        signaldata = squeeze(ts_all(subj,:,:));
+        signaldata = squeeze(ts_subj_1(subj,:,:));
         x=detrend(demean(signaldata(seed,:)));
         
         ts_filt_narrow =zscore(filtfilt(bfilt_narrow,afilt_narrow,x));
@@ -120,7 +120,7 @@ f_diff = freq(idxFreqOfMaxPwr);
 %FOR EACH AREA AND TIMEPOINT COMPUTE THE INSTANTANEOUS PHASE IN THE RANGE
 %OF .04 TO .09 Hz
 PhasesD = zeros(nNodes, Tmax, nSubs);
-signaldata=squeeze(ts_all(subj,:,:));
+signaldata=squeeze(ts_subj_1(subj,:,:));
 for seed=1:nNodes
     x = demean(detrend(signaldata(seed,:)));
     xFilt = filtfilt(bfilt_narrow,afilt_narrow,x);    % zero phase filter the data
@@ -211,6 +211,20 @@ ylabel('Fitting')
 ylim([0 1])
 title('Fitting for 4 values of g')
 
+% figure
+% imagesc(FC_emp-eye(83))
+% xlabel('ROIs')
+% ylabel('ROIs')
+% title('Empirical FC')
+% colorbar
+% 
+% 
+% figure
+% imagesc(squeeze(FC_simul(:,:,3))-eye(83))
+% xlabel('ROIs')
+% ylabel('ROIs')
+% title('Simulated FC (g=0.2)')
+% colorbar
 
 %% Example for all the range of g from 0 to 1 with a resolution of 0.01
 
