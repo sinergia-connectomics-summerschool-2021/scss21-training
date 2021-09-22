@@ -4,7 +4,7 @@ class: center, middle, inverse
 
 ---
 
-# Tutorial 02: <br>Anatomical and Diffusion <br>MRI Pipelines
+# Tutorial 02: Anatomical and Diffusion <br>MRI Pipelines
 
 ### sebastien.tourbier@alumni.epfl.ch  |  CC-BY
 
@@ -50,7 +50,7 @@ layout: false
 
 - **fMRI pipeline** Compute the different brain functional connectivity matrices based on the Pearson's correlation between time-series of the cortical parcels
 
-![Image not found](https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png)
+<img src="https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png" width="auto" height="auto">
 
 Source: [https://connectome-mapper-3.readthedocs.io/en/latest/\_images/flowchart_bidsapp.png](https://connectome-mapper-3.readthedocs.io/en/latest/_images/flowchart_bidsapp.png)
 
