@@ -70,7 +70,6 @@ Source: [https://connectome-mapper-3.readthedocs.io/en/latest/\_images/flowchart
 
 ## Generate the 5-scale Lausanne2018 brain parcellations and the brain structural connectivity matrices
 
-
 ---
 
 ## Exercise 1: Use `cmpbidsappmanager` to configure the anatomical and diffusion pipelines 
@@ -79,12 +78,36 @@ Source: [https://connectome-mapper-3.readthedocs.io/en/latest/\_images/flowchart
 
 ---
 
-### Store dataset path
+## Launch `cmpbidsappmanager`
 
-- Store dataset path in `BIDS_DIR` environment variable
+- Open a terminal and launch `cmpbidsmanager`:
 ```
-export BIDS_DIR="$HOME/Data/ds003505-sample"
+cmpbidsappmanger
 ```
+
+---
+
+## Load the summerschool dataset
+
+- Load the summerschool dataset that in located in `$HOME/Data/ds003505`
+
+---
+
+## Open the configurator window
+
+- Click on the left button of the main window of `cmpbidsappmanager` to open the configurator window
+
+---
+
+## Configure the pipelines
+
+- Configure the pipelines as follows
+
+---
+
+## Save the pipeline configuration files
+
+- Click on the button to save all pipeline configuration files
 
 ---
 
@@ -94,9 +117,71 @@ export BIDS_DIR="$HOME/Data/ds003505-sample"
 
 ---
 
+## Open the BIDS App window
+
+- Click on the middle button of the main window of `cmpbidsappmanager` to open the BIDS App window
+
+---
+
+## Configure the BIDS App execution
+
+- Select to process `sub-01`
+
+- Control that the configuration files are pointing to  `$HOME/Data/ds003505/code/ref_anatomical_config.json` and `$HOME/Data/ds003505/code/ref_diffusion_config.json`, created in Exercise 1
+
+- Click on the `Check Settings` button to verify the configuration
+
+---
+
+## Execute the BIDS App
+
+- Click on the `Run BIDS App` button to execute the BIDS App
+
+- You can see the main output in the terminal
+
+- An execution log is written to `derivatives/cmp/sub-01/sub-01_log.txt`
+
+---
+
 ## Exercise 3: Use `cmpbidsappmanager` to check pipeline outputs with external viewers
 
 **Goal** Learn how to inspect the quality of the different stage outputs
+
+---
+
+## Open the quality inspector window
+
+- Click on the right button of the main window of `cmpbidsappmanager` to open the quality inspector window
+
+---
+
+## Select to view outputs for `sub-01` 
+
+- Select `sub-01` from the list
+
+---
+
+## Check the parcellations co-registered to the diffusion volume
+
+- In `Diffusion Pipeline > Registration Stage`, you can check the parcellations co-registered to the resampled diffusion-free B0 volume
+
+---
+
+## Check the fiber orientation distribution function (ODF) image reconstructed by CSD
+
+- In `Diffusion Pipeline > Diffusion Stage`, you can check the fiber orientation distribution function (ODF) image reconstructed by CSD
+
+---
+
+## Check the tractogram
+
+- In `Diffusion Pipeline > Connectome Stage`, you can check the final tractogram (the reconstructed fibers used in the connectivity matrices)
+
+---
+
+## Visualize the connectivity matrices
+
+- In `Diffusion Pipeline > Connectome Stage`, you can check the connectivity matrices for the different connectivity measures and the 5 scales of Lausanne 2018 parcellation scheme
 
 ---
 
@@ -104,6 +189,25 @@ export BIDS_DIR="$HOME/Data/ds003505-sample"
 
 **Goal** Learn how to run directly the BIDSApp commandline interface of CMP3
 
+---
+
+## Run the BIDSApp commandline interface of CMP3
+
+- In a terminal, run the following command:
+```
+docker run -it --rm \
+ -v /home/sinergiasummerschool/Data/ds003505:/bids_dir \
+ -v /home/sinergiasummerschool/Data/ds003505/derivatives:/output_dir \
+ -v /home/sinergiasummerschool/Softwares/freesurfer/license.txt:/bids_dir/code/license.txt \
+ -v /home/sinergiasummerschool/Data/ds003505/code/ref_anatomical_config.json:/code/ref_anatomical_config.json \
+ -v /home/sinergiasummerschool/Data/ds003505/code/ref_diffusion_config.json:/code/ref_diffusion_config.json \
+ -u "$(id -u)":"$(id -g)" \
+ sebastientourbier/connectomemapper-bidsapp:v3.0.0-RC4 \  # CMP BIDS App Docker image
+ /bids_dir /output_dir participant --participant_label 01 \  # BIDS App argument sets
+ --anat_pipeline_config /code/ref_anatomical_config.json \
+ --dwi_pipeline_config /code/ref_diffusion_config.json \
+ --fs_license /bids_dir/code/license.txt
+```
 ---
 
 # Questions?
