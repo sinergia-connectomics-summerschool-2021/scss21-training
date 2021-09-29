@@ -6,34 +6,37 @@
   <ul>
     <li>Go to the VirtualBox Download page: <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>.</li>
     <br>
-    <li>Select the link from the "VirtualBox 6.1.26 platform packages" section that matches your system.</li>
-    <br>
-    <li><strong>For Windows 10 users:</strong>
+    <li>Select the link from the "VirtualBox 6.1.26 platform packages" section that matches your system.
+      <br>
       <ul>
-        <li> Double-click the downloaded executable file (Windows Installer 1.1 or higher is required).</li>
-        <li> Select default options in installation dialog.</li>
-        <li> The installer will create a "VirtualBox" group in the Windows Start menu.</li>
-        <li> For more detailed step-by-step instructions,
-          <a href="https://websiteforstudents.com/installing-virtualbox-windows-10/">look here</a></li>
+        <li><strong>For Windows 10 users:</strong>
+          <ul>
+            <li> Double-click the downloaded executable file (Windows Installer 1.1 or higher is required).</li>
+            <li> Select default options in installation dialog.</li>
+            <li> The installer will create a "VirtualBox" group in the Windows Start menu.</li>
+            <li> For more detailed step-by-step instructions,
+              <a href="https://websiteforstudents.com/installing-virtualbox-windows-10/">look here</a></li>
+          </ul>
+        </li>
+        <li><strong>For Mac users:</strong>
+          <ul>
+            <li> Double-click on the downloaded dmg file to have its contents mounted</li>
+            <li> A window will open telling you to double click on the VirtualBox.pkg installer file displayed in that window.</li>
+            <li> This will start the installer, which will allow you to select where to install VirtualBox to.</li>
+            <li> For more detailed step-by-step instructions,
+              <a href="https://websiteforstudents.com/installing-virtualbox-windows-10/">look here</a>.</li>
+          </ul>
+        </li>
+        <li><strong>For Ubuntu users:</strong>
+          <ul>
+            <li> Step-by-step instructions can be found <a href="https://websiteforstudents.com/install-virtualbox-latest-on-ubuntu-16-04-lts-17-04-17-10/">here</a>.</li>
+          </ul>
+        </li>
+        <br>
       </ul>
     </li>
-    <li><strong>For Mac users:</strong>
-      <ul>
-        <li> Double-click on the downloaded dmg file to have its contents mounted</li>
-        <li> A window will open telling you to double click on the VirtualBox.pkg installer file displayed in that window.</li>
-        <li> This will start the installer, which will allow you to select where to install VirtualBox to.</li>
-        <li> For more detailed step-by-step instructions,
-          <a href="https://websiteforstudents.com/installing-virtualbox-windows-10/">look here</a>.</li>
-      </ul>
-    </li>
-    <li><strong>For Ubuntu users:</strong>
-      <ul>
-        <li> Step-by-step instructions can be found <a href="https://websiteforstudents.com/install-virtualbox-latest-on-ubuntu-16-04-lts-17-04-17-10/">here</a>.</li>
-      </ul>
-    </li>
-    <br>
     <li>
-      Install the extension pack that will allow you to share files between the virtual machine and your personal computer. It can easily download from the following <a href="https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack">link</a>.
+      Install the extension pack that will allow you to share files between the virtual machine and your personal computer. It can be easily download from the following <a href="https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack">link</a>.
     </li>
   </ul>
 </p>
@@ -60,8 +63,12 @@
 <h4 id="install_vm_image">Configure a shared folder</h4>
 
 <p>
+  Once the VM is imported, you can configure one or multiple local folder(s) to be mounted inside your VM to easily share files back and forth. 
   <ul>
-    <li>Once the VM is imported, Choose "scss21-training" from the menu on the left -> Click "Settings" -> Go to "Shared Folders" tab -> Add your new shared folder.</li>
+    <li>Choose "scss21-training" from the menu on the left</li>
+    <li>Click "Settings" -> Go to "Shared Folders" tab</li>
+    <li>Make sure there is no shared folder configured at first use. If so, just remove it/them.</li>
+    <li>Click on "Add a new shared folder" to configure the mount of your shared folder inside the VM.</li>
   </ul>
 </p>
 
