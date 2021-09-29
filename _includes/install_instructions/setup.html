@@ -1,4 +1,6 @@
-<h3 id="install_virtualbox">Install Virtual Box</h3>
+<h3 id="setup_virtualbox">Getting ready with the summerschool virtual machine</h4>
+
+<h4 id="install_virtualbox">Install Virtual Box</h4>
 
 <p>
   <ol>
@@ -36,16 +38,17 @@
   </ul>
 </p>
 
-<h3 id="install_vm_image">Download and import the VM image file</h3>
+<h4 id="install_vm_image">Download and import the VM image file</h4>
 
 <p>
   <ul>
     <li>Download from [TO BE COMING]</li>
     <li>To import the scss21-training.ova file:
       <ul>
-        <li> Open VirtualBox on your computer.</li>
-        <li> select "File" -> "Import Appliance" from the VirtualBox menu.</li>
-        <li> Click through the import wizard dialog leaving the default settings (see <a href="https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html">here</a> for example step-by-step instructions).</li>
+        <li>Open VirtualBox on your computer.</li>
+        <li>Select "File" -> "Import Appliance" from the VirtualBox menu.</li>
+        <li>Click through the import wizard dialog leaving the default settings (see <a href="https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html">here</a> for example step-by-step instructions).</li>
+        <li>Once the VM is imported, Choose "scss21-training" from the menu on the left -> Click "Settings" -> Go to "Shared Folders" tab -> Add your new shared folder.</li>
       </ul>
     </li>
   </ul>
@@ -56,14 +59,34 @@
 </p>
 
 
-<h3 id="start_vm">Starting the VM</h3>
+<h4 id="start_vm">Start the VM</h4>
 
 <ul>
   <li>Open VirtualBox on your computer</li>
   <li>Choose "scss21-training" from the menu on the left and press "start" (the green arrow) to start the Ubuntu virtual machine.</li>
 </ul>
 
-<h3 id="issues">Issues</h3>
+A few tools included in the VM require the use of a license and so you will need to provide your own at first use. More details are provided in the two next sections.
+
+<h4 id="start_vm">FreeSurfer license</h4>
+<p>
+  A license key must be obtained to make the FreeSurfer tools operational. Obtaining a license is free and comes in the form of a license.txt file.
+  <ol>
+    <li>*Get one:* if you do not have a Freesurfer license.txt key file yet, you can get one at the following <a href="https://surfer.nmr.mgh.harvard.edu/registration.html">link</a></li> 
+    <li>*Install:*  Once you obtain the license.txt file, download it inside the VM (for instance you can use the shared folder previously configured) and copy it to the FreeSurfer installation directory (i.e. "$HOME/Softwares/freesurfer" defined by the $FREESURFER_HOME environment variable).</li> 
+  </ol>
+</p>
+
+<h4 id="start_vm">Trackvis license</h4>
+<p>
+  A license key must be obtained to be able to use Trackvis, a tool for viewing fibers reconstructed with tractography. 
+  <ol>
+    <li>*Get one:* if you do not have a Trackvis license key yet, you can get one by creating a new account at the <a href="http://www.trackvis.org/download/">download request page</a> of Trackvis website.</li> 
+    <li>*Validate:*  Once your account is created and you have received the email with a summary of your Name / Institution / License Key, you can start Trackvis. To do so, open a terminal and type trackvis. Fill the fields with the information in the email and type "OK". Congrats, you are all set!</li> 
+  </ol>
+</p>
+
+<h4 id="issues">Issues</h4>
 
 <ul>
   <li>If you have a windows 10 pro 64 bit (eg Lenovo X1C) machine and get an error like: 
