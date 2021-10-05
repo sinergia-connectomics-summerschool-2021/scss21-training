@@ -310,7 +310,7 @@ Learn how to inspect the quality of the different stage outputs
 - Select `sub-01` from the list
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-select-subject.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-select-subject.png">
 </p>
 
 ---
@@ -337,7 +337,7 @@ Learn how to inspect the quality of the different stage outputs
 
 ## Check the fiber orientation distribution function (ODF) image reconstructed by CSD
 
-- Customize the rendering of the orientation distribution functions by going to `Tools > ODF Editor`
+- Customize the rendering of the orientation distribution functions by going to `Tools > ODF display`
 
 <p style="text-align: center">
     <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod-mrview.png" height="400">
