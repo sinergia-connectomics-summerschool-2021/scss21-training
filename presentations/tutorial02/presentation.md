@@ -372,7 +372,7 @@ Learn how to inspect the quality of the different stage outputs
 - In `Diffusion Pipeline > Connectome Stage`, you can view the connectivity matrices for the different measures and the 5 scales of Lausanne 2018 parcellation scheme in a standard or circular layout
 
 <p style="text-align: center">
-    <table border="1">
+    <table border="0" style="margin-left: auto; margin-right: auto;">
         <tr>
             <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-circular.png" height="348"></td>
             <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-number-fibers-circular.png" height="348"></td>
