@@ -28,7 +28,7 @@ layout: false
 
 - Container image capturing a neuroimaging pipeline that takes a BIDS formatted dataset as input. BIDS Apps are constructed in a way that does not depend on any software outside of the image other than the container engine.
 
-- Followed a same core set of command line arguments, making the BIDS Apps easy to run and integrate into automated platforms
+- Followed a same core set of command line arguments
     
     ```bash
     docker run -ti --rm \
@@ -38,13 +38,12 @@ layout: false
       /bids_dataset /outputs participant --participant_label 01  # Core set of commandline arguments
     ```
 
----
-
-## What is a BIDS App?
-
 - Versioned and all of the historical versions are available to download.
 
-- By reporting the BIDS App name and version in a manuscript, authors can provide others with the ability to exactly replicate their analysis workflow.
+<p>
+    <a style="color:dodgerblue;">&rarr;</a> BIDS Apps easy to be run and integrated into automated platforms<br><br>
+    <a style="color:dodgerblue;">&rarr;</a> Authors can provide others with the ability to exactly replicate their analysis workflow by reporting the BIDS App name and version in a manuscript.
+</p>
 
 ---
 
@@ -53,16 +52,20 @@ layout: false
 For more information, please check the resources below:
 
 - **BIDS-Apps Website:** [https://bids-apps.neuroimaging.io](https://bids-apps.neuroimaging.io)
+
 - **Paper** Gorgolewski KJ, et al. (2017) "BIDS apps: Improving ease of use, accessibility, and reproducibility of neuroimaging data analysis methods". PLOS Computational Biology 13(3): e1005209. [https://doi.org/10.1371/journal.pcbi.1005209](https://doi.org/10.1371/journal.pcbi.1005209)
+
 - **Chris Gorgolewski's Workshop at Neurohackweek** [https://www.youtube.com/watch?v=wAATYzn8O54&ab_channel=ArielRokem](https://www.youtube.com/watch?v=wAATYzn8O54&ab_channel=ArielRokem)
 
 ---
 
 ## What is Connectome Mapper 3?
 
-- Open-source Python3 image processing pipeline software
+- Open-source Python project that implements full anatomical, diffusion and resting-state MRI processing pipelines, from raw Diffusion / T1 / T2 / BOLD data, organized accordingly to the BIDS standard, to multi-resolution connection matrices.
 
-- Implement full anatomical, diffusion and resting-state MRI processing pipelines, from raw Diffusion / T1 / T2 / BOLD data, organized accordingly to the BIDS standard to multi-resolution connection matrices.
+<p style="text-align: center">
+    <img src="../../assets/img/tutorial02/cmp3-diagram.png" height="450" alt="CMP3 diagram">
+</p>
 
 ---
 
@@ -86,20 +89,10 @@ For more information, please check the resources below:
 
 ## What is Connectome Mapper 3 (CMP3)?
 
-- Come with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in :
+- Come with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in the configuration and execution of CMP3:
 
 <p style="text-align: center">
     <img src="../../assets/img/tutorial02/cmp-gui-paper.png" height="450" alt="CMP3 Graphical User Interface aka cmpbidsappmanager">
-</p>
-
----
-
-## What is Connectome Mapper 3?
-
-- CMP3 provides the following pipelines, split into stages for the sake of modularity:
-
-<p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmp3-diagram.png" height="450" alt="CMP3 diagram">
 </p>
 
 ---
