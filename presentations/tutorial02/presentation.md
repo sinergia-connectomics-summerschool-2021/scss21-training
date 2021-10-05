@@ -30,13 +30,13 @@ layout: false
 
 - Followed a same core set of command line arguments, making the BIDS Apps easy to run and integrate into automated platforms
     
-```bash
-docker run -ti --rm \
-  -v $HOME/data/ds005:/bids_dataset:ro \  # map dataset directory to the /bids_dataset location inside the container
-  -v HOME/data/ds005/derivatives/example-0.0.4:/outputs \  # map output directory to the /outputs location inside the container
-  bids/example:0.0.4 \  # BIDS App
-  /bids_dataset /outputs participant --participant_label 01  # Core set of commandline arguments
-```
+    ```bash
+    docker run -ti --rm \
+      -v $HOME/data/ds005:/bids_dataset:ro \  # map dataset directory to the /bids_dataset location inside the container
+      -v HOME/data/ds005/derivatives/example-0.0.4:/outputs \  # map output directory to the /outputs location inside the container
+      bids/example:0.0.4 \  # BIDS App
+      /bids_dataset /outputs participant --participant_label 01  # Core set of commandline arguments
+    ```
 
 ---
 
@@ -70,17 +70,17 @@ For more information, please check the resources below:
 
 - Distributed as a BIDS App to promote reusability, reproducibility and replicatibility
 
-```bash
-$ docker run -it --rm \
- -v "/local/path/to/bids/dataset":"/bids_dir" \
- -v "/local/path/to/output/directory":"/output_dir" \
- -v "/local/path/to/freesurfer/license.txt":"/bids_dir/code/license.txt" \
- sebastientourbier/connectomemapper-bidsapp \
- "/bids_dir" "/output_dir" participant --participant_label "01" \
- --anat_pipeline_config "/code/ref_anatomical_config.json" \
- --dwi_pipeline_config "/code/ref_diffusion_config.json" \
- --fs_license "/bids_dir/code/license.txt"
-```
+    ```bash
+    $ docker run -it --rm \
+     -v "/local/path/to/bids/dataset":"/bids_dir" \
+     -v "/local/path/to/output/directory":"/output_dir" \
+     -v "/local/path/to/freesurfer/license.txt":"/bids_dir/code/license.txt" \
+     sebastientourbier/connectomemapper-bidsapp \
+     "/bids_dir" "/output_dir" participant --participant_label "01" \
+     --anat_pipeline_config "/code/ref_anatomical_config.json" \
+     --dwi_pipeline_config "/code/ref_diffusion_config.json" \
+     --fs_license "/bids_dir/code/license.txt"
+    ```
 
 ---
 
@@ -165,7 +165,7 @@ cmpbidsappmanager
 - Configure the segmentation stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-segmentation-config.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-segmentation-config.png">
 </p>
 
 ---
@@ -175,7 +175,7 @@ cmpbidsappmanager
 - Configure the parcellation stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-parcellation-config.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-parcellation-config.png">
 </p>
 
 ---
@@ -185,7 +185,7 @@ cmpbidsappmanager
 - Configure the preprocessing stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwipreproc-config.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwipreproc-config.png">
 </p>
 
 ---
@@ -195,7 +195,7 @@ cmpbidsappmanager
 - Configure the registration stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwicoreg-config.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwicoreg-config.png">
 </p>
 
 ---
@@ -215,7 +215,7 @@ cmpbidsappmanager
 - Configure the connectome stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwiconnectome-config.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwiconnectome-config.png">
 </p>
 
 ---
@@ -227,6 +227,8 @@ cmpbidsappmanager
 <p style="text-align: center">
     <img src="../../assets/img/tutorial02/cmpbidsappmanager-save-config.png" height="450">
 </p>
+
+- You can close the window
 
 ---
 
@@ -275,13 +277,15 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 - You can see the docker run command genertated in the main output in the terminal
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-execution-command.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-execution-command.png" style="width: 90%">
 </p>
 
 - An execution log is written to `derivatives/cmp/sub-01/sub-01_log.txt`
-```
-glogg $HOME/Data/ds003505/derivatives/cmp/sub-01/sub-01_log.txt
-```
+    ```
+    glogg $HOME/Data/ds003505/derivatives/cmp/sub-01/sub-01_log.txt
+    ```
+
+- Once completed, you can close the window
 
 ---
 
@@ -316,7 +320,7 @@ Learn how to inspect the quality of the different stage outputs
 - In `Diffusion Pipeline > Registration Stage`, you can view the parcellations co-registered to the resampled diffusion-free B0 volume
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-coreg.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-coreg.png">
 </p>
 
 ---
@@ -326,7 +330,7 @@ Learn how to inspect the quality of the different stage outputs
 - In `Diffusion Pipeline > Diffusion Stage`, you can view `SH image` i.e. the fiber orientation distribution function (ODF) image reconstructed by CSD
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod.png">
 </p>
 
 ---
@@ -348,7 +352,7 @@ In `mrview`, you can:
 - In `Diffusion Pipeline > Connectome Stage`, you can view `final tractogram` (the reconstructed fibers used in the connectivity matrices)
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fibers.png" height="450"></td>
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fibers.png">
 </p>
 
 ---
@@ -358,7 +362,7 @@ In `mrview`, you can:
 - To display all fibers in `trackvis`, disable the "Y" axis in `Property > Track > Slice Filters` 
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fibers-trackvis.png" height="450"></td>
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fibers-trackvis.png" height="450">
 </p>
 
 ---
@@ -370,12 +374,14 @@ In `mrview`, you can:
 <p style="text-align: center">
     <table border="1">
         <tr>
-            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-matrix.png" height="450"></td>
-            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-circular.png" height="450"></td>
+            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-matrix.png" height="350"></td>
+            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-circular.png" height="350"></td>
         </tr>
     </table>
     
 </p>
+
+- You can close all the windows
 
 ---
 
