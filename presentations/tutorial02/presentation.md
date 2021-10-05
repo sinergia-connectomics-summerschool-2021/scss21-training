@@ -195,7 +195,7 @@ cmpbidsappmanager
 - Configure the registration stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwicoreg-config.png">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwicoreg-config.png" height="450">
 </p>
 
 ---
@@ -337,13 +337,13 @@ Learn how to inspect the quality of the different stage outputs
 
 ## Check the fiber orientation distribution function (ODF) image reconstructed by CSD
 
-In `mrview`, you can:
-- Press the `Ctrl + "+"` / `Ctrl + "-"` shortcuts to zoom in / out a region
 - Customize the rendering of the orientation distribution functions by going to `Tools > ODF Editor`
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod-mrview.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod-mrview.png" height="400">
 </p>
+
+- Press the `Ctrl + "+"` / `Ctrl + "-"` shortcuts to zoom in / out a region
 
 ---
 
@@ -374,14 +374,14 @@ In `mrview`, you can:
 <p style="text-align: center">
     <table border="1">
         <tr>
-            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-matrix.png" height="350"></td>
-            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-circular.png" height="350"></td>
+            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-circular.png" height="348"></td>
+            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-number-fibers-circular.png" height="348"></td>
         </tr>
     </table>
     
 </p>
 
-- You can close all the windows
+- Once completed, you can close all the windows.
 
 ---
 
