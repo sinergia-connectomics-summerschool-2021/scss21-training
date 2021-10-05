@@ -310,7 +310,7 @@ Learn how to inspect the quality of the different stage outputs
 - Select `sub-01` from the list
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-select-subject.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-select-subject.png">
 </p>
 
 ---
