@@ -89,7 +89,7 @@ $ docker run -it --rm \
 - Come with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in :
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmp-gui-paper.png" style="width: 100%" alt="CMP3 Graphical User Interface aka cmpbidsappmanager">
+    <img src="../../assets/img/tutorial02/cmp-gui-paper.png" style="height: 70%" alt="CMP3 Graphical User Interface aka cmpbidsappmanager">
 </p>
 
 ---
@@ -99,7 +99,7 @@ $ docker run -it --rm \
 - CMP3 provides the following pipelines, split into stages for the sake of modularity:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmp3-diagram.png" style="width: 100%" alt="CMP3 diagram">
+    <img src="../../assets/img/tutorial02/cmp3-diagram.png" style="height: 70%" alt="CMP3 diagram">
 </p>
 
 ---
@@ -145,7 +145,7 @@ cmpbidsappmanager
 - Click `File > Load BIDS dataset...` in the main window and load the summerschool dataset that in located in `$HOME/Data/ds003505`
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-load-dataset.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-load-dataset.png" style="height: 70%">
 </p>
 
 ---
@@ -155,7 +155,7 @@ cmpbidsappmanager
 - Click on the left button of the main window of `cmpbidsappmanager` to open the configurator window
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-open-config.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-open-config.png" style="height: 70%">
 </p>
 
 ---
@@ -165,7 +165,7 @@ cmpbidsappmanager
 - Configure the segmentation stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-segmentation-config.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-segmentation-config.png" style="height: 70%">
 </p>
 
 ---
@@ -175,7 +175,7 @@ cmpbidsappmanager
 - Configure the parcellation stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-parcellation-config.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-parcellation-config.png" style="height: 70%">
 </p>
 
 ---
@@ -185,7 +185,7 @@ cmpbidsappmanager
 - Configure the preprocessing stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwipreproc-config.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwipreproc-config.png" style="height: 70%">
 </p>
 
 ---
@@ -195,7 +195,7 @@ cmpbidsappmanager
 - Configure the registration stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwicoreg-config.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwicoreg-config.png" style="height: 70%">
 </p>
 
 ---
@@ -205,7 +205,7 @@ cmpbidsappmanager
 - Configure the diffusion reconstruction and tractography stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwirecon-config.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwirecon-config.png" style="height: 70%">
 </p>
 
 ---
@@ -215,7 +215,7 @@ cmpbidsappmanager
 - Configure the connectome stage as follows:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwiconnectome-config.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-dwiconnectome-config.png" style="height: 70%">
 </p>
 
 ---
@@ -225,7 +225,7 @@ cmpbidsappmanager
 - Click on the "Save All Pipeline Configuration Files" button
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-save-config.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-save-config.png" style="height: 70%">
 </p>
 
 ---
@@ -241,7 +241,7 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 - Click on the middle button of the main window of `cmpbidsappmanager` to open the BIDS App window
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-open-bidsapp.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-open-bidsapp.png" style="height: 70%">
 </p>
 
 ---
@@ -255,7 +255,7 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 - Click on the `Check Settings` button to verify the configuration
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-config-check.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-config-check.png" style="height: 70%">
 </p>
 
 ---
@@ -265,7 +265,7 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 - Click on the `Run BIDS App` button to execute the BIDS App
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-run.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-run.png" style="height: 70%">
 </p>
 
 ---
@@ -275,7 +275,7 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 - You can see the docker run command genertated in the main output in the terminal
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-execution-command.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-execution-command.png" style="height: 70%">
 </p>
 
 - An execution log is written to `derivatives/cmp/sub-01/sub-01_log.txt`
@@ -296,7 +296,7 @@ Learn how to inspect the quality of the different stage outputs
 - Click on the right button of the main window of `cmpbidsappmanager` to open the quality inspector window
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-open-quality.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-open-quality.png" style="height: 70%">
 </p>
 
 ---
@@ -306,7 +306,7 @@ Learn how to inspect the quality of the different stage outputs
 - Select `sub-01` from the list
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-select-subject.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-select-subject.png" style="height: 70%">
 </p>
 
 ---
@@ -316,7 +316,7 @@ Learn how to inspect the quality of the different stage outputs
 - In `Diffusion Pipeline > Registration Stage`, you can view the parcellations co-registered to the resampled diffusion-free B0 volume
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-coreg.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-coreg.png" style="height: 70%">
 </p>
 
 ---
@@ -326,7 +326,7 @@ Learn how to inspect the quality of the different stage outputs
 - In `Diffusion Pipeline > Diffusion Stage`, you can view `SH image` i.e. the fiber orientation distribution function (ODF) image reconstructed by CSD
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod.png" style="height: 70%">
 </p>
 
 ---
@@ -338,7 +338,7 @@ In `mrview`, you can:
 - Customize the rendering of the orientation distribution functions by going to `Tools > ODF Editor`
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod-mrview.png" style="width: 100%">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fod-mrview.png" style="height: 70%">
 </p>
 
 ---
@@ -348,7 +348,7 @@ In `mrview`, you can:
 - In `Diffusion Pipeline > Connectome Stage`, you can view `final tractogram` (the reconstructed fibers used in the connectivity matrices)
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fibers.png" style="width: 100%"></td>
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fibers.png" style="height: 70%"></td>
 </p>
 
 ---
@@ -358,7 +358,7 @@ In `mrview`, you can:
 - To display all fibers in `trackvis`, disable the "Y" axis in `Property > Track > Slice Filters` 
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fibers-trackvis.png" style="width: 100%"></td>
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-fibers-trackvis.png" style="height: 70%"></td>
 </p>
 
 ---
@@ -370,8 +370,8 @@ In `mrview`, you can:
 <p style="text-align: center">
     <table border="1">
         <tr>
-            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-matrix.png" style="width: 100%"></td>
-            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-circular.png" style="width: 100%"></td>
+            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-matrix.png" style="height: 70%"></td>
+            <td><img src="../../assets/img/tutorial02/cmpbidsappmanager-quality-circular.png" style="height: 70%"></td>
         </tr>
     </table>
     
