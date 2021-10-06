@@ -14,11 +14,95 @@ class: center, middle, inverse
 
 layout: false
 
-## What is Brain Imaging Data Structure?
+## Tutorial outline
 
-- Brain Imaging Data Structure (`BIDS`) is a file organization and naming scheme for neuroimaging data
+- What is BIDS?
 
-- Originally developed for MRI data, extended to MEG and EEG
+- Why BIDS?
+
+- Getting familiar with BIDS and the summer school dataset
+
+- How can I convert to BIDS?
+
+---
+
+##  What is BIDS?
+
+- BIDS ([Brain Imaging Data Structure](http://bids.neuroimaging.io)) is a standard for describing and organizing neuroimaging data and metadata, developed by a community of scientists working within the [International Neuroinformatics Coordinating Facility](http://incf.org) and in the neuroimaging field ([GitHub Repository](https://github.com/INCF/BIDS)).
+
+- Based on simple file formats and folder structures to reflect current lab practices and make it accessible to a wide range of scientists coming from different backgrounds.
+
+<p style="text-align: center">
+    <img src="https://bids.neuroimaging.io/assets/img/dicom-reorganization-transparent-white_1000x477.png" style="background-color: #000000; width: 70%;">
+</p>
+
+---
+
+##  Why BIDS?
+
+1. Data Sharing and Reproducibility: BIDS facilitates data sharing to a greater extent. By providing a consistent and well-specified way to organize and document neuroimaging data and metadata, it prevents not only the situation in which you spend hours in making sense of the data shared by a colleague or your past-self, but also the situation in which you spend hours in finding pertinent information. The improvement of data sharing induced by BIDS allows us to better assess and reproduce others’ experimental findings.
+
+---
+
+##  Why BIDS?
+
+2. Ecosystem of tools: A number of tools have been developed around BIDS such as:
+    - the [BIDS-validator](https://github.com/bids-standard/bids-validator), to automatically check datasets for adherence to the specification,
+    - [OpenNeuro](https://openneuro.org/), as a open database for sharing datasets structured following BIDS, 
+    - [pybids](https://github.com/bids-standard/pybids) a Python library that centralizes interactions with BIDS formatted datasets,
+    - or the so-called [“BIDS Apps”](https://bids-apps.neuroimaging.io/), a collection of portable neuroimaging analysis pipelines that take BIDS datasets as input.
+
+---
+
+##  Why BIDS?
+
+3. Code sharing: By developing a tool that can handle BIDS formatted datasets, you create at the same time a BIDS-app that has the potential to be applicable to a large range of users as BIDS becomes increasingly popular.
+
+---
+
+##  How BIDS is different from the existing solutions
+
+- Existing solutions are more online databases that make (1) harder to manipulate with data and (2) data completely dependent on the database
+
+- BIDS is just a collection of files structured in folders accordingly to the specifications. It is intentionally based on simple file formats and folder structures to reflect current lab practices and make it accessible to a wide range of scientists coming from different backgrounds.
+
+- Focus on interoperability, simplicity, public data sharing, community, and extensibility. Originally developed for MRI data, already extended to MEG and EEG, and a number of [BIDS extension proposals](https://bids.neuroimaging.io/get_involved#extending-the-bids-specification) are ongoing.
+
+---
+
+##  Getting familiar with BIDS and the summer school dataset
+
+- Sample of the [VEPCON dataset](https://openneuro.org/datasets/ds003505/versions/1.0.2), a multimodal neuroimaging dataset created by our consortium. 
+
+- Follows the BIDS standard and provides raw data of high-density EEG, structural MRI and diffusion weighted images (DWI) recorded for the first of the 20 participants.
+
+```output
+$HOME/Data/ds003505                         -> Location in the virtual machine of the summer school
+├── dataset_description.json                -> Describes briefly the dataset in JSON format
+├── participants.tsv                        -> Table file that stores demographical information of the participants
+├── participants.json                       -> Describes the columns of participants.tsv table file
+├── CHANGES                                 -> Describes changes between dataset versions   
+├── README                                  -> Describes the dataset in more details in Markdown format
+└── sub-01
+│   ├── anat
+│   │   ├── sub-01_T1w.nii.gz               -> Raw T1w MRI stored in Nifti format
+│   │   └── sub-01_T1w.json                 -> Describes acquisition parameters related to the Nifti image
+│   ├── dwi
+│   │   ├── sub-01_dwi.nii.gz               -> Raw diffusion MRI stored in Nifti format
+│   │   ├── sub-01_dwi.json                 -> Describes acquisition parameters related to the Nifti image
+│   │   ├── sub-01_dwi.bval                 -> Describes the b-value for each diffusion gradient direction
+│   │   └── sub-01_dwi.bvec                 -> Describes the diffusion gradient directions
+│   └── eeg
+│       ├── sub-01_coordsystem.json         -> Describes coordinate system, units, fiducials, anatomical landmarks location
+│       ├── sub-01_electrodes.tsv           -> Location of electrodes expressed in the coordinate system and units described in _coordsystem.json file
+│       ├── sub-01_task-faces_channels.tsv  -> List the channels
+│       ├── sub-01_task-faces_eeg.bdf       -> Raw EEG data in .bdf format
+│       ├── sub-01_task-faces_eeg.json      -> Describes acquisition parameters of the raw EEG data
+│       ├── sub-01_task-faces_events.tsv    -> Table file that describes each event 
+│       └── sub-01_task-faces_events.json   -> Describes the columns of the _events.tsv table file
+└── derivatives                             -> Stores the derivatives i.e. the data generated during the tutorials
+
+```
 
 ---
 
@@ -174,6 +258,20 @@ print(dwi_files)
 ```python
 eeg_tasks = layout.get_tasks()
 ```
+
+---
+
+###  How can I convert to BIDS?
+
+There exists a collection of different packages available for each neuroimaging modality:
+
+- MRI: you will need to have access to raw data (e.g. dicoms) in order to perform the conversion and use a tool such as [dcm2bids](https://github.com/UNFmontreal/Dcm2Bids), [heudiconv](https://github.com/nipy/heudiconv)/[reproin](https://github.com/ReproNim/reproin), [bidscoin](https://github.com/Donders-Institute/bidscoin), [bidskit](https://github.com/jmtyszka/bidskit).
+
+- EEG: you will need to have access to raw data in order to perform the conversion and use a tool such as [mne-bids](https://github.com/mne-tools/mne-bids), [Fieldtrip](https://github.com/fieldtrip/fieldtrip) [data2bids](https://www.fieldtriptoolbox.org/reference/data2bids/), [bids-matlab-tools EEGLab addon](https://github.com/sccn/bids-matlab-tools), [Brainstorm](https://neuroimage.usc.edu/brainstorm), [BrainVision bv2bids](https://pressrelease.brainproducts.com/bv2bids/).
+
+- Physiological recordings: there exist [physio2bids](https://github.com/tarrlab/physio2bids) and [bidscoin](https://github.com/Donders-Institute/bidscoin) for data recorded with Siemens MRI scanner, and [phys2bids](https://github.com/physiopy/phys2bids) for data recorded by AcqKnowledge (BIOPAC) and Labchart (ADInstruments).
+
+Admittingly, most BIDS converters require a bit of user input and work. A number of great tutorials are available online to help you getting started. Check the list of [selected tutorials](https://sinergia-connectomics-summerschool-2021.github.io/scss21-training/01-01-tuto1/#selected-external-tutorials) available online.
 
 ---
 
