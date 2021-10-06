@@ -220,8 +220,6 @@ class: middle
 
 ## Exercise 2: Manipulate the summerschool dataset in Python
 
-class: middle
-
 - The goal of this exercise is to learn about how to interact with the summerschool BIDS dataset in Python using the `pybids` library
 
 ---
