@@ -12,7 +12,7 @@ class: center, middle, inverse
 
 ---
 
-class: center, middle
+class: middle
 layout: false
 
 ## Tutorial outline
@@ -27,7 +27,7 @@ layout: false
 
 ---
 
-class: center, middle
+class: middle
 
 ##  What is BIDS?
 
@@ -39,7 +39,7 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
 ##  Why BIDS?
 
@@ -49,7 +49,7 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
 ##  Why BIDS?
 
@@ -67,7 +67,7 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
 ##  Why BIDS?
 
@@ -77,7 +77,7 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
 ##  How BIDS is different from the existing solutions
 
@@ -89,47 +89,45 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
 ##  Getting familiar with BIDS and the summer school dataset
 
 ---
 
-class: center, middle
-
 - Sample of the [VEPCON dataset](https://openneuro.org/datasets/ds003505/versions/1.0.2), a multimodal neuroimaging dataset created by our consortium.
 
 ```output
-$HOME/Data/ds003505                         # Location in the virtual machine of the summer school
-├── dataset_description.json                # Describes briefly the dataset in JSON format
-├── participants.tsv                        # Table file that stores demographical information of the participants
-├── participants.json                       # Describes the columns of participants.tsv table file
-├── CHANGES                                 # Describes changes between dataset versions   
-├── README                                  # Describes the dataset in more details in Markdown format
+$HOME/Data/ds003505                         "Location in the virtual machine of the summer school"
+├── dataset_description.json                "Describes briefly the dataset in JSON format"
+├── participants.tsv                        "Table file that stores demographical information of the participants"
+├── participants.json                       "Describes the columns of participants.tsv table file"
+├── CHANGES                                 "Describes changes between dataset versions"
+├── README                                  "Describes the dataset in more details in Markdown format"
 └── sub-01
 │   ├── anat
-│   │   ├── sub-01_T1w.nii.gz               # Raw T1w MRI stored in Nifti format
-│   │   └── sub-01_T1w.json                 # Describes acquisition parameters related to the Nifti image
+│   │   ├── sub-01_T1w.nii.gz               "Raw T1w MRI stored in Nifti format"
+│   │   └── sub-01_T1w.json                 "Describes acquisition parameters related to the Nifti image"
 │   ├── dwi
-│   │   ├── sub-01_dwi.nii.gz               # Raw diffusion MRI stored in Nifti format
-│   │   ├── sub-01_dwi.json                 # Describes acquisition parameters related to the Nifti image
-│   │   ├── sub-01_dwi.bval                 # Describes the b-value for each diffusion gradient direction
-│   │   └── sub-01_dwi.bvec                 # Describes the diffusion gradient directions
+│   │   ├── sub-01_dwi.nii.gz               "Raw diffusion MRI stored in Nifti format"
+│   │   ├── sub-01_dwi.json                 "Describes acquisition parameters related to the Nifti image"
+│   │   ├── sub-01_dwi.bval                 "Describes the b-value for each diffusion gradient direction"
+│   │   └── sub-01_dwi.bvec                 "Describes the diffusion gradient directions"
 │   └── eeg
-│       ├── sub-01_coordsystem.json         # Describes coordinate system, units, fiducials, anatomical landmarks location
-│       ├── sub-01_electrodes.tsv           # Location of electrodes expressed in the coordinate system and units described in _coordsystem.json file
-│       ├── sub-01_task-faces_channels.tsv  # List the channels
-│       ├── sub-01_task-faces_eeg.bdf       # Raw EEG data in .bdf format
-│       ├── sub-01_task-faces_eeg.json      # Describes acquisition parameters of the raw EEG data
-│       ├── sub-01_task-faces_events.tsv    # Table file that describes each event 
-│       └── sub-01_task-faces_events.json   # Describes the columns of the _events.tsv table file
-└── derivatives                             # Stores the derivatives i.e. the data generated during the tutorials
+│       ├── sub-01_coordsystem.json         "Describes coordinate system, units, fiducials, anatomical landmarks location"
+│       ├── sub-01_electrodes.tsv           "Location of electrodes expressed in the coordinate system and units described in _coordsystem.json file"
+│       ├── sub-01_task-faces_channels.tsv  "List the channels"
+│       ├── sub-01_task-faces_eeg.bdf       "Raw EEG data in .bdf format"
+│       ├── sub-01_task-faces_eeg.json      "Describes acquisition parameters of the raw EEG data"
+│       ├── sub-01_task-faces_events.tsv    "Table file that describes each event"
+│       └── sub-01_task-faces_events.json   "Describes the columns of the _events.tsv table file"
+└── derivatives                             "Stores the derivatives i.e. the data generated during the tutorials"
 
 ```
 
 ---
 
-class: center, middle
+class: middle
 
 ## Tutorial and Requirements
 
@@ -142,7 +140,7 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
 ## Exercise 1: Create a BIDS-compliant dataset
 
@@ -152,7 +150,7 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
 ## Store dataset path
 
@@ -163,7 +161,7 @@ export BIDS_DIR="$HOME/Data/ds003505-sample"
 
 ---
 
-class: center, middle
+class: middle
 
 ## Check the current file organization and naming
 
@@ -176,7 +174,7 @@ or use the graphical file manager.
 
 ---
 
-class: center, middle
+class: middle
 
 ## Create the BIDS folder structure
 
@@ -188,7 +186,7 @@ mkdir -p $BIDS_DIR/sub-01/dwi;
 
 ---
 
-class: center, middle
+class: middle
 
 ## Adopt BIDS file naming
 
@@ -210,7 +208,7 @@ mv $BIDS_DIR/diffusion.bvec $BIDS_DIR/sub-01/dwi/sub-01_dwi.bvec
 
 ---
 
-class: center, middle
+class: middle
 
 ## Validate dataset with the bids-validator
 
@@ -218,17 +216,17 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
 ## Exercise 2: Manipulate the summerschool dataset in Python
 
-class: center, middle
+class: middle
 
 - The goal of this exercise is to learn about how to interact with the summerschool BIDS dataset in Python using the `pybids` library
 
 ---
 
-class: center, middle
+class: middle
 
 ## Setup
 
@@ -246,7 +244,7 @@ from bids import BIDSLayout
 
 ---
 
-class: center, middle
+class: middle
 
 ## Initialize a BIDSLayout object
 
@@ -263,7 +261,7 @@ print(layout)
 
 ---
 
-class: center, middle
+class: middle
 
 ## Get the list of T1w images available for sub-01
 
@@ -281,7 +279,7 @@ print(t1_files)
 
 ---
 
-class: center, middle
+class: middle
 
 ## Get the list of the diffusion images available for sub-01
 
@@ -299,7 +297,7 @@ print(dwi_files)
 
 ---
 
-class: center, middle
+class: middle
 
 ## Get the EEG task list of sub-01
 
@@ -310,7 +308,7 @@ eeg_tasks = layout.get_tasks()
 
 ---
 
-class: center, middle
+class: middle
 
 ###  How can I convert to BIDS?
 
@@ -326,7 +324,7 @@ Admittingly, most BIDS converters require a bit of user input and work. A number
 
 ---
 
-class: center, middle
+class: middle
 
 # Questions?
 
