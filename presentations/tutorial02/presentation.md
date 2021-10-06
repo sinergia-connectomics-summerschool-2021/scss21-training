@@ -67,7 +67,19 @@ class: middle
 
 ## What is Connectome Mapper 3?
 
-- Open-source Python project that implements full anatomical, diffusion and resting-state MRI processing pipelines, from raw Diffusion / T1 / T2 / BOLD data, organized accordingly to the BIDS standard, to multi-resolution connection matrices.
+- Open-source Python3 image processing pipeline software, hosted on GitHub, developed for use within our [Sinergia Consortium Project](https://sinergiaconsortium.bitbucket.io/), as well as for open-source software distribution.
+
+<p style="text-align: center">
+    <img src="../../assets/img/tutorial02/cmp3-github.png" height="450" alt="CMP3 GitHub">
+</p>
+
+---
+
+class: middle
+
+## What is Connectome Mapper 3?
+
+- CMP3 provides a BIDS App that implements full anatomical, diffusion and resting-state MRI processing pipelines, from raw Diffusion / T1 / T2 / BOLD data, organized accordingly to the BIDS standard, to multi-resolution connection matrices.
 
 <p style="text-align: center">
     <img src="../../assets/img/tutorial02/cmp3-diagram.png" height="450" alt="CMP3 diagram">
@@ -77,29 +89,9 @@ class: middle
 
 class: middle
 
-## What is Connectome Mapper 3?
-
-- Distributed as a BIDS App to promote reusability, reproducibility and replicatibility
-
-    ```bash
-    $ docker run -it --rm \
-     -v "/local/path/to/bids/dataset":"/bids_dir" \
-     -v "/local/path/to/output/directory":"/output_dir" \
-     -v "/local/path/to/freesurfer/license.txt":"/bids_dir/code/license.txt" \
-     sebastientourbier/connectomemapper-bidsapp \
-     "/bids_dir" "/output_dir" participant --participant_label "01" \
-     --anat_pipeline_config "/code/ref_anatomical_config.json" \
-     --dwi_pipeline_config "/code/ref_diffusion_config.json" \
-     --fs_license "/bids_dir/code/license.txt"
-    ```
-
----
-
-class: middle
-
 ## What is Connectome Mapper 3 (CMP3)?
 
-- Come with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in the configuration and execution of CMP3:
+- CMP3 comes with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in its configuration and execution of CMP3:
 
 <p style="text-align: center">
     <img src="../../assets/img/tutorial02/cmp-gui-paper.png" height="450" alt="CMP3 Graphical User Interface aka cmpbidsappmanager">
@@ -114,7 +106,9 @@ class: middle
 For more documentation, please check the resources below.
 
 - **Documentation:** [https://connectome-mapper-3.readthedocs.io](https://connectome-mapper-3.readthedocs.io)
+
 - **How to use `cmpbidsappmmanager`:** [https://connectome-mapper-3.readthedocs.io/en/latest/bidsappmanager.html](https://connectome-mapper-3.readthedocs.io/en/latest/bidsappmanager.html)
+
 - **How to use CMP3 BIDS App commandline interface:** [https://connectome-mapper-3.readthedocs.io/en/latest/usage.html](https://connectome-mapper-3.readthedocs.io/en/latest/usage.html)
 
 ---
