@@ -57,13 +57,13 @@ class: middle
 
     A number of tools have been developed around BIDS such as:
 
-        - the [BIDS-validator](https://github.com/bids-standard/bids-validator), to automatically check datasets for adherence to the specification
+    - the [BIDS-validator](https://github.com/bids-standard/bids-validator), to automatically check datasets for adherence to the specification
 
-        - [OpenNeuro](https://openneuro.org/), as a open database for sharing datasets structured following BIDS
+    - [OpenNeuro](https://openneuro.org/), as a open database for sharing datasets structured following BIDS
 
-        - [pybids](https://github.com/bids-standard/pybids) a Python library that centralizes interactions with BIDS formatted datasets
+    - [pybids](https://github.com/bids-standard/pybids) a Python library that centralizes interactions with BIDS formatted datasets
 
-        - or the [“BIDS Apps”](https://bids-apps.neuroimaging.io/), a collection of portable neuroimaging analysis pipelines that take BIDS datasets as input
+    - or the [“BIDS Apps”](https://bids-apps.neuroimaging.io/), a collection of portable neuroimaging analysis pipelines that take BIDS datasets as input
 
 ---
 
