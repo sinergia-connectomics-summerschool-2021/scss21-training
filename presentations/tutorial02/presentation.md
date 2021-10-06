@@ -70,7 +70,7 @@ class: middle
 - Open-source Python3 image processing pipeline software, hosted on GitHub, developed for use within our [Sinergia Consortium Project](https://sinergiaconsortium.bitbucket.io/), as well as for open-source software distribution.
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmp3-github.png" height="450" alt="CMP3 GitHub">
+    <img src="../../assets/img/tutorial02/cmp3-github.png" height="430" alt="CMP3 GitHub">
 </p>
 
 ---
@@ -79,10 +79,10 @@ class: middle
 
 ## What is Connectome Mapper 3?
 
-- CMP3 provides a BIDS App that implements full anatomical, diffusion and resting-state MRI processing pipelines, from raw Diffusion / T1 / T2 / BOLD data, organized accordingly to the BIDS standard, to multi-resolution connection matrices.
+- Provides a BIDS App that implements full anatomical, diffusion and resting-state MRI processing pipelines, from raw Diffusion / T1 / T2 / BOLD data, organized accordingly to the BIDS standard, to multi-resolution connection matrices.
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmp3-diagram.png" height="450" alt="CMP3 diagram">
+    <img src="../../assets/img/tutorial02/cmp3-diagram.png" height="400" alt="CMP3 diagram">
 </p>
 
 ---
@@ -91,10 +91,10 @@ class: middle
 
 ## What is Connectome Mapper 3 (CMP3)?
 
-- CMP3 comes with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in its configuration and execution of CMP3:
+- Comes with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in its configuration and execution of CMP3:
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmp-gui-paper.png" height="450" alt="CMP3 Graphical User Interface aka cmpbidsappmanager">
+    <img src="../../assets/img/tutorial02/cmp-gui-paper.png" height="430" alt="CMP3 Graphical User Interface aka cmpbidsappmanager">
 </p>
 
 ---
@@ -279,14 +279,10 @@ class: middle
 
 ## Configure the BIDS App execution
 
-- Select to process `sub-01`
-
-- Control that the configuration files are pointing to  `$HOME/Data/ds003505/code/ref_anatomical_config.json` and `$HOME/Data/ds003505/code/ref_diffusion_config.json`, created in Exercise 1
-
-- Click on the `Check Settings` button to verify the configuration
+- Select to process `sub-01` and control that the configuration files are pointing to  `$HOME/Data/ds003505/code/ref_anatomical_config.json` and `$HOME/Data/ds003505/code/ref_diffusion_config.json`, created in Exercise 1
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-config-check.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-config-check.png" height="420">
 </p>
 
 ---
@@ -295,17 +291,17 @@ class: middle
 
 ## Execute the BIDS App
 
-- Click on the `Run BIDS App` button to execute the BIDS App
+- Click on the `Check Settings` button to verify the configuration and then on the `Run BIDS App` button (which should have been enabled) to execute the BIDS App
 
 <p style="text-align: center">
-    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-run.png" height="450">
+    <img src="../../assets/img/tutorial02/cmpbidsappmanager-bidsapp-run.png" height="420">
 </p>
 
 ---
 
 class: middle
 
-## Execute the BIDS App
+## Control the execution of the BIDS App
 
 - You can see the docker run command genertated in the main output in the terminal
 
