@@ -31,6 +31,8 @@ class: middle
 
 - Container image capturing a neuroimaging pipeline that takes a BIDS formatted dataset as input. BIDS Apps are constructed in a way that does not depend on any software outside of the image other than the container engine.
 
+- Versioned and all of the historical versions are available to download.
+
 - Followed a same core set of command line arguments
     
     ```bash
@@ -40,12 +42,9 @@ class: middle
       bids/example:0.0.4 \  # BIDS App
       /bids_dataset /outputs participant --participant_label 01  # Core set of commandline arguments
     ```
-
-- Versioned and all of the historical versions are available to download.
-
 <p>
-    <a style="color:dodgerblue;">&rarr;</a> BIDS Apps easy to be run and integrated into automated platforms<br><br>
-    <a style="color:dodgerblue;">&rarr;</a> Authors can provide others with the ability to exactly replicate their analysis workflow by reporting the BIDS App name and version in a manuscript.
+    <a style="color:dodgerblue;">&rarr;</a> Easy to be run and integrated into automated platforms<br>
+    <a style="color:dodgerblue;">&rarr;</a> Ability to exactly replicate an analysis workflow by reporting the BIDS App name and version in a manuscript.
 </p>
 
 ---
