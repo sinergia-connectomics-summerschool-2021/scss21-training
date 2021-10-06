@@ -12,6 +12,7 @@ class: center, middle, inverse
 
 ---
 
+class: middle
 layout: false
 
 ## Tutorial outline
@@ -24,9 +25,13 @@ layout: false
 
 ---
 
+class: middle
+
 ## What is a BIDS App?
 
 - Container image capturing a neuroimaging pipeline that takes a BIDS formatted dataset as input. BIDS Apps are constructed in a way that does not depend on any software outside of the image other than the container engine.
+
+- Versioned and all of the historical versions are available to download.
 
 - Followed a same core set of command line arguments
     
@@ -37,15 +42,14 @@ layout: false
       bids/example:0.0.4 \  # BIDS App
       /bids_dataset /outputs participant --participant_label 01  # Core set of commandline arguments
     ```
-
-- Versioned and all of the historical versions are available to download.
-
 <p>
-    <a style="color:dodgerblue;">&rarr;</a> BIDS Apps easy to be run and integrated into automated platforms<br><br>
-    <a style="color:dodgerblue;">&rarr;</a> Authors can provide others with the ability to exactly replicate their analysis workflow by reporting the BIDS App name and version in a manuscript.
+    <a style="color:dodgerblue;">&rarr;</a> Easy to be run and integrated into automated platforms<br>
+    <a style="color:dodgerblue;">&rarr;</a> Ability to exactly replicate an analysis workflow by reporting the BIDS App name and version in a manuscript.
 </p>
 
 ---
+
+class: middle
 
 ## What is a BIDS App?
 
@@ -59,9 +63,23 @@ For more information, please check the resources below:
 
 ---
 
+class: middle
+
 ## What is Connectome Mapper 3?
 
-- Open-source Python project that implements full anatomical, diffusion and resting-state MRI processing pipelines, from raw Diffusion / T1 / T2 / BOLD data, organized accordingly to the BIDS standard, to multi-resolution connection matrices.
+- Open-source Python3 image processing pipeline software, hosted on GitHub, developed for use within our [Sinergia Consortium Project](https://sinergiaconsortium.bitbucket.io/), as well as for open-source software distribution.
+
+<p style="text-align: center">
+    <img src="../../assets/img/tutorial02/cmp3-github.png" height="450" alt="CMP3 GitHub">
+</p>
+
+---
+
+class: middle
+
+## What is Connectome Mapper 3?
+
+- CMP3 provides a BIDS App that implements full anatomical, diffusion and resting-state MRI processing pipelines, from raw Diffusion / T1 / T2 / BOLD data, organized accordingly to the BIDS standard, to multi-resolution connection matrices.
 
 <p style="text-align: center">
     <img src="../../assets/img/tutorial02/cmp3-diagram.png" height="450" alt="CMP3 diagram">
@@ -69,27 +87,11 @@ For more information, please check the resources below:
 
 ---
 
-## What is Connectome Mapper 3?
-
-- Distributed as a BIDS App to promote reusability, reproducibility and replicatibility
-
-    ```bash
-    $ docker run -it --rm \
-     -v "/local/path/to/bids/dataset":"/bids_dir" \
-     -v "/local/path/to/output/directory":"/output_dir" \
-     -v "/local/path/to/freesurfer/license.txt":"/bids_dir/code/license.txt" \
-     sebastientourbier/connectomemapper-bidsapp \
-     "/bids_dir" "/output_dir" participant --participant_label "01" \
-     --anat_pipeline_config "/code/ref_anatomical_config.json" \
-     --dwi_pipeline_config "/code/ref_diffusion_config.json" \
-     --fs_license "/bids_dir/code/license.txt"
-    ```
-
----
+class: middle
 
 ## What is Connectome Mapper 3 (CMP3)?
 
-- Come with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in the configuration and execution of CMP3:
+- CMP3 comes with a Graphical User Interface aka `cmpbidsappmanager`, designed to facilitate all steps involved in its configuration and execution of CMP3:
 
 <p style="text-align: center">
     <img src="../../assets/img/tutorial02/cmp-gui-paper.png" height="450" alt="CMP3 Graphical User Interface aka cmpbidsappmanager">
@@ -97,15 +99,21 @@ For more information, please check the resources below:
 
 ---
 
+class: middle
+
 ## What is Connectome Mapper 3?
 
 For more documentation, please check the resources below.
 
 - **Documentation:** [https://connectome-mapper-3.readthedocs.io](https://connectome-mapper-3.readthedocs.io)
+
 - **How to use `cmpbidsappmmanager`:** [https://connectome-mapper-3.readthedocs.io/en/latest/bidsappmanager.html](https://connectome-mapper-3.readthedocs.io/en/latest/bidsappmanager.html)
+
 - **How to use CMP3 BIDS App commandline interface:** [https://connectome-mapper-3.readthedocs.io/en/latest/usage.html](https://connectome-mapper-3.readthedocs.io/en/latest/usage.html)
 
 ---
+
+class: middle
 
 ## Generate the brain parcellations and the structural connectivity matrices with CMP3
 
@@ -118,11 +126,15 @@ For more documentation, please check the resources below.
 
 ---
 
+class: middle
+
 ## Exercise 1: Use cmpbidsappmanager to configure the pipelines 
 
 Learn how to configure the anatomical and diffusion pipelines and create their configuration files with `cmpbidsappmanager`
 
 ---
+
+class: middle
 
 ## Launch cmpbidsappmanager
 
@@ -132,6 +144,8 @@ cmpbidsappmanager
 ```
 
 ---
+
+class: middle
 
 ## Load the summerschool dataset
 
@@ -143,6 +157,8 @@ cmpbidsappmanager
 
 ---
 
+class: middle
+
 ## Open the configurator window
 
 - Click on the left button of the main window of `cmpbidsappmanager` to open the configurator window
@@ -152,6 +168,8 @@ cmpbidsappmanager
 </p>
 
 ---
+
+class: middle
 
 ## Configure the anatomical pipeline
 
@@ -163,6 +181,8 @@ cmpbidsappmanager
 
 ---
 
+class: middle
+
 ## Configure the anatomical pipeline
 
 - Configure the parcellation stage as follows:
@@ -172,6 +192,8 @@ cmpbidsappmanager
 </p>
 
 ---
+
+class: middle
 
 ## Configure the diffusion pipeline
 
@@ -183,6 +205,8 @@ cmpbidsappmanager
 
 ---
 
+class: middle
+
 ## Configure the diffusion pipeline
 
 - Configure the registration stage as follows:
@@ -192,6 +216,8 @@ cmpbidsappmanager
 </p>
 
 ---
+
+class: middle
 
 ## Configure the diffusion pipeline
 
@@ -203,6 +229,8 @@ cmpbidsappmanager
 
 ---
 
+class: middle
+
 ## Configure the diffusion pipeline
 
 - Configure the connectome stage as follows:
@@ -212,6 +240,8 @@ cmpbidsappmanager
 </p>
 
 ---
+
+class: middle
 
 ## Save the pipeline configuration files
 
@@ -225,11 +255,15 @@ cmpbidsappmanager
 
 ---
 
+class: middle
+
 ## Exercise 2: Use cmpbidsappmanager to run the BIDSApp
 
 Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 
 ---
+
+class: middle
 
 ## Open the BIDS App window
 
@@ -240,6 +274,8 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 </p>
 
 ---
+
+class: middle
 
 ## Configure the BIDS App execution
 
@@ -255,6 +291,8 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 
 ---
 
+class: middle
+
 ## Execute the BIDS App
 
 - Click on the `Run BIDS App` button to execute the BIDS App
@@ -264,6 +302,8 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 </p>
 
 ---
+
+class: middle
 
 ## Execute the BIDS App
 
@@ -282,11 +322,15 @@ Learn how to configure and execute the BIDS App with `cmpbidsappmanager`
 
 ---
 
+class: middle
+
 ## Exercise 3: Use cmpbidsappmanager to check pipeline outputs with external viewers
 
 Learn how to inspect the quality of the different stage outputs
 
 ---
+
+class: middle
 
 ## Open the quality inspector window
 
@@ -298,6 +342,8 @@ Learn how to inspect the quality of the different stage outputs
 
 ---
 
+class: middle
+
 ## Select to view outputs for sub-01
 
 - Select `sub-01` from the list
@@ -307,6 +353,8 @@ Learn how to inspect the quality of the different stage outputs
 </p>
 
 ---
+
+class: middle
 
 ## Check the parcellations co-registered to the diffusion volume
 
@@ -318,6 +366,8 @@ Learn how to inspect the quality of the different stage outputs
 
 ---
 
+class: middle
+
 ## Check the fiber orientation distribution function (ODF) image reconstructed by CSD
 
 - In `Diffusion Pipeline > Diffusion Stage`, you can view `SH image` i.e. the fiber orientation distribution function (ODF) image reconstructed by CSD
@@ -327,6 +377,8 @@ Learn how to inspect the quality of the different stage outputs
 </p>
 
 ---
+
+class: middle
 
 ## Check the fiber orientation distribution function (ODF) image reconstructed by CSD
 
@@ -340,6 +392,8 @@ Learn how to inspect the quality of the different stage outputs
 
 ---
 
+class: middle
+
 ## Check the tractogram
 
 - In `Diffusion Pipeline > Connectome Stage`, you can view `final tractogram` (the reconstructed fibers used in the connectivity matrices)
@@ -350,6 +404,8 @@ Learn how to inspect the quality of the different stage outputs
 
 ---
 
+class: middle
+
 ## Check the tractogram
 
 - To display all fibers in `trackvis`, disable the "Y" axis in `Property > Track > Slice Filters` 
@@ -359,6 +415,8 @@ Learn how to inspect the quality of the different stage outputs
 </p>
 
 ---
+
+class: middle
 
 ## Visualize the connectivity matrices
 
@@ -378,11 +436,15 @@ Learn how to inspect the quality of the different stage outputs
 
 ---
 
+class: middle
+
 ## Exercise 4: Run directly the BIDSApp commandline interface
 
 Learn how to run directly the BIDSApp commandline interface of CMP3
 
 ---
+
+class: middle
 
 ## Run the BIDSApp commandline interface of CMP3
 
@@ -403,6 +465,8 @@ $ docker run -it --rm \
  --fs_license "/bids_dir/code/license.txt"
 ```
 ---
+
+class: middle
 
 # Questions?
 
