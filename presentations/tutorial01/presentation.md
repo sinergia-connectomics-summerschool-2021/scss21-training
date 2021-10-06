@@ -12,6 +12,7 @@ class: center, middle, inverse
 
 ---
 
+class: center, middle
 layout: false
 
 ## Tutorial outline
@@ -26,25 +27,29 @@ layout: false
 
 ---
 
+class: center, middle
+
 ##  What is BIDS?
 
 - BIDS ([Brain Imaging Data Structure](http://bids.neuroimaging.io)) is a standard for describing and organizing neuroimaging data and metadata, developed by a community of scientists working within the [International Neuroinformatics Coordinating Facility](http://incf.org) and in the neuroimaging field ([GitHub Repository](https://github.com/INCF/BIDS)).
 
 <p style="text-align: center">
-    <img src="https://bids.neuroimaging.io/assets/img/dicom-reorganization-transparent-white_1000x477.png" style="background-color: #000000; width: 55%;">
+    <img src="https://bids.neuroimaging.io/assets/img/dicom-reorganization-transparent-white_1000x477.png" style="background-color: #000000; width: 60%;">
 </p>
 
-- Based on simple file formats and folder structures to reflect current lab practices and make it accessible to a wide range of scientists coming from different backgrounds.
-
 ---
+
+class: center, middle
 
 ##  Why BIDS?
 
 1. Data Sharing and Reproducibility
 
-    BIDS facilitates data sharing to a greater extent. <a style="color:dodgerblue;">&rarr;</a> Allows us to better assess and reproduce others’ experimental findings.
+    BIDS facilitates data sharing to a greater extent <a style="color:dodgerblue;">&rarr;</a> Allows us to better assess and reproduce others’ experimental findings
 
 ---
+
+class: center, middle
 
 ##  Why BIDS?
 
@@ -52,15 +57,17 @@ layout: false
 
     A number of tools have been developed around BIDS such as:
 
-        - the [BIDS-validator](https://github.com/bids-standard/bids-validator), to automatically check datasets for adherence to the specification,
+        - the [BIDS-validator](https://github.com/bids-standard/bids-validator), to automatically check datasets for adherence to the specification
 
-        - [OpenNeuro](https://openneuro.org/), as a open database for sharing datasets structured following BIDS, 
+        - [OpenNeuro](https://openneuro.org/), as a open database for sharing datasets structured following BIDS
 
-        - [pybids](https://github.com/bids-standard/pybids) a Python library that centralizes interactions with BIDS formatted datasets,
+        - [pybids](https://github.com/bids-standard/pybids) a Python library that centralizes interactions with BIDS formatted datasets
 
-        - or the [“BIDS Apps”](https://bids-apps.neuroimaging.io/), a collection of portable neuroimaging analysis pipelines that take BIDS datasets as input.
+        - or the [“BIDS Apps”](https://bids-apps.neuroimaging.io/), a collection of portable neuroimaging analysis pipelines that take BIDS datasets as input
 
 ---
+
+class: center, middle
 
 ##  Why BIDS?
 
@@ -69,6 +76,8 @@ layout: false
     By developing a tool that can handle BIDS formatted datasets, you create at the same time a BIDS App that has the potential to be applicable to a large range of users as BIDS becomes increasingly popular.
 
 ---
+
+class: center, middle
 
 ##  How BIDS is different from the existing solutions
 
@@ -80,7 +89,13 @@ layout: false
 
 ---
 
+class: center, middle
+
 ##  Getting familiar with BIDS and the summer school dataset
+
+---
+
+class: center, middle
 
 - Sample of the [VEPCON dataset](https://openneuro.org/datasets/ds003505/versions/1.0.2), a multimodal neuroimaging dataset created by our consortium.
 
@@ -114,6 +129,8 @@ $HOME/Data/ds003505                         # Location in the virtual machine of
 
 ---
 
+class: center, middle
+
 ## Tutorial and Requirements
 
 - In this live tutorial, we will be using a sample of the publicly
@@ -125,6 +142,8 @@ $HOME/Data/ds003505                         # Location in the virtual machine of
 
 ---
 
+class: center, middle
+
 ## Exercise 1: Create a BIDS-compliant dataset
 
 - The summer school sample dataset has been modified such that it does not comply anymore with the BIDS standard
@@ -132,6 +151,8 @@ $HOME/Data/ds003505                         # Location in the virtual machine of
 - The goal of this exercise is to make this dataset compliant to the BIDS standard again
 
 ---
+
+class: center, middle
 
 ## Store dataset path
 
@@ -141,6 +162,8 @@ export BIDS_DIR="$HOME/Data/ds003505-sample"
 ```
 
 ---
+
+class: center, middle
 
 ## Check the current file organization and naming
 
@@ -153,6 +176,8 @@ or use the graphical file manager.
 
 ---
 
+class: center, middle
+
 ## Create the BIDS folder structure
 
 - Create the BIDS folder structure `sub-01/anat` and `sub-01/dwi` for anatomical and diffusion MRI data
@@ -163,9 +188,9 @@ mkdir -p $BIDS_DIR/sub-01/dwi;
 
 ---
 
+class: center, middle
+
 ## Adopt BIDS file naming
-
-
 
 - Rename demographical TSV and JSON table data accordingly to BIDS
 ```
@@ -185,17 +210,25 @@ mv $BIDS_DIR/diffusion.bvec $BIDS_DIR/sub-01/dwi/sub-01_dwi.bvec
 
 ---
 
+class: center, middle
+
 ## Validate dataset with the bids-validator
 
 - Validate the dataset with the online [`bids-validator`](https://bids-standard.github.io/bids-validator/):
 
 ---
 
+class: center, middle
+
 ## Exercise 2: Manipulate the summerschool dataset in Python
+
+class: center, middle
 
 - The goal of this exercise is to learn about how to interact with the summerschool BIDS dataset in Python using the `pybids` library
 
 ---
+
+class: center, middle
 
 ## Setup
 
@@ -213,6 +246,8 @@ from bids import BIDSLayout
 
 ---
 
+class: center, middle
+
 ## Initialize a BIDSLayout object
 
 - Initialize a BIDSLayout object with the path of summerschool sample dataset
@@ -227,6 +262,8 @@ print(layout)
 ```
 
 ---
+
+class: center, middle
 
 ## Get the list of T1w images available for sub-01
 
@@ -244,6 +281,8 @@ print(t1_files)
 
 ---
 
+class: center, middle
+
 ## Get the list of the diffusion images available for sub-01
 
 - Provide the argument of `get()` method in a python dictionary to get the list of the diffusion images available for `sub-01`:
@@ -260,6 +299,8 @@ print(dwi_files)
 
 ---
 
+class: center, middle
+
 ## Get the EEG task list of sub-01
 
 - Use the `get_tasks()` method to get the list of available tasks:
@@ -268,6 +309,8 @@ eeg_tasks = layout.get_tasks()
 ```
 
 ---
+
+class: center, middle
 
 ###  How can I convert to BIDS?
 
@@ -282,6 +325,8 @@ There exists a collection of different packages available for each neuroimaging 
 Admittingly, most BIDS converters require a bit of user input and work. A number of great tutorials are available online to help you getting started. Check the list of [selected tutorials](https://sinergia-connectomics-summerschool-2021.github.io/scss21-training/01-01-tuto1/#selected-external-tutorials) available online.
 
 ---
+
+class: center, middle
 
 # Questions?
 
