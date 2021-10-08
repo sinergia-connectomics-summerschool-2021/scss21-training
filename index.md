@@ -308,3 +308,7 @@ to include the relevant installation instructions.
 {% endif %}
 
 {% include install_instructions/setup.html %}
+
+<h2 id="faq">Frequently Asked Questions (FAQ)</h2>
+
+{% include faq.md %}
