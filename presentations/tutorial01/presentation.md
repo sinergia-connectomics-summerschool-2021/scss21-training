@@ -13,6 +13,9 @@ class: center, middle, inverse
 ---
 
 class: middle
+background-image: "https://sinergia-connectomics-summerschool-2021.github.io/img/SummerSchool2021_website_logo.png"
+background-position: top right
+layout: true
 layout: false
 
 ## Tutorial outline
