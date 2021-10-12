@@ -43,7 +43,7 @@ class: middle
 
 ##  Why BIDS?
 
-1. Data Sharing and Reproducibility
+- Data Sharing and Reproducibility
 
     BIDS facilitates data sharing to a greater extent <a style="color:dodgerblue;">&rarr;</a> Allows us to better assess and reproduce others’ experimental findings
 
@@ -53,7 +53,7 @@ class: middle
 
 ##  Why BIDS?
 
-2. Ecosystem of tools
+- Ecosystem of tools
 
     A number of tools have been developed around BIDS such as:
 
@@ -71,7 +71,7 @@ class: middle
 
 ##  Why BIDS?
 
-3. Code sharing
+- Code sharing
 
     By developing a tool that can handle BIDS formatted datasets, you create at the same time a BIDS App that has the potential to be applicable to a large range of users as BIDS becomes increasingly popular.
 
@@ -193,7 +193,7 @@ class: middle
 - Rename demographical TSV and JSON table data accordingly to BIDS
 ```
 mv $BIDS_DIR/subjects_demo.tsv $BIDS_DIR/participants.tsv
-mv $BIDS_DIR/subjects_demo.tsv $BIDS_DIR/participants.json
+mv $BIDS_DIR/subjects_demo.json $BIDS_DIR/participants.json
 ```
 
 - Rename and move anatomical and diffusion MRI data to `sub-01/anat` and `sub-01/dwi` accordingly to BIDS
@@ -249,7 +249,7 @@ class: middle
 - Initialize a BIDSLayout object with the path of summerschool sample dataset
 ```python
 # Create the BIDSLayout object representing the summerschool sample dataset
-layout = BIDSLayout("$HOME/Data/ds003505")
+layout = BIDSLayout("/home/sinergiasummerschool/Data/ds003505")
 ```
 
 - You can print a general overview of the object using the `print()` method:
