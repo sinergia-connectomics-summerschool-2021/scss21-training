@@ -38,10 +38,10 @@
     <link rel="stylesheet" type="text/css" href="{{ root }}/assets/css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="{{ root }}/assets/css/lesson.css" />
     {% if site.carpentry == "swc" %}
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon-swc.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ root }}/assets/img/sc-logo.png" />
     {% endif %}
     {% if site.carpentry == "dc" %}
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon-dc.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ root }}/assets/img/sc-logo.png" />
     {% endif %}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,6 +49,14 @@
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2300XKG7X"></script>
+    <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M2300XKG7X');
+    </script>
     <title>{{ page.venue }}: {{ page.humandate }}</title>
   </head>
   <body>
